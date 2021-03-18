@@ -26,5 +26,17 @@ public class LoginSteps {
 	public void customer_is_successfully_logged_in_to_the_application() {
 		System.out.println("4. Successfully Logged In");
 	}
+	//those (\\w+) when they are passed as arguments - or (.*) too
+	@When("^Customer enters correct (\\w+) and (\\w+)$")
+	public void customer_enters_correct_admin222_and_pass1(String login, String password) {
+		System.out.println("5. Scenario Outline - Credentials passed ");
+	}
+	//those (\\w+) when they are passed as arguments - or (.*) too
+	@Then("^Customer is re-directed to web with (.*)$")
+	public void customer_is_re_directed_to_web_with_test(String Welcome) {
+		System.out.println("6. Moved to Web - with text");
+	}
+
+	
 	
 }
