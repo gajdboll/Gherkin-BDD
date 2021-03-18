@@ -1,5 +1,8 @@
 package stepDefininitions;
 
+import java.util.List;
+
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -36,7 +39,17 @@ public class LoginSteps {
 	public void customer_is_re_directed_to_web_with_test(String Welcome) {
 		System.out.println("6. Moved to Web - with text");
 	}
+	@When("Customer enters correct login credentials")
+	public void enterCredentialsFromDataTable(DataTable table) {
+		System.out.println("7. Enter credentials based on dataTables");
+		 //line below used for both techniques - possibilities
+        List<List<String>> cells = table.cells();
+        // quick way to hide selected code / text - > ctrl + Shift + "/"
+        System.out.println("The value is : " + cells.get(1).get(0));
+        System.out.println("The value is : " + cells.get(1).get(1));
+    
+	}
 
-	
+
 	
 }
