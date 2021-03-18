@@ -1,6 +1,8 @@
-# Initial faze of BDD project
+# Initial faze of BDD project For some reason CUMCUMER version 6.6.0 works fine
 
-Additional gitigore file created to keep target / jars & pom file secured
+We are using Eclipse IDE to run the BDD project (I encounter some difficulties to do the same on IntellyJ IDE)
+
+Additional .gitigore file created to keep target / jars & pom file secured
 
 All pom dependencies are attached in this file as reference:
 
@@ -72,3 +74,15 @@ Dependencies attached to that pom file:
             <scope>test</scope>
    
 *****************************************/
+###The first step is to create FOLDER / directory (not a package with feature files)
+
+Feature Files that s English language with all the steps of represented scenario which allows business understand 
+to understand test(s) - that feature is mapped with correct automation process (correct steps) allowing 
+run certain test.
+
+After that we need to create Test Runner (part of JUNIT library ) which runs our tests
+
+And the last part of that is create java class with all the steps - hoe to recreate test.
+That part is mapped with feature files - and is not necessarily  understood by business
+
+
