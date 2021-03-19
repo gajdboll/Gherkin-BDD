@@ -1,14 +1,29 @@
 package stepDefininitions;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LoginSteps {
+/////////That listed part need to be added if we want to use nested class
+//new object need to be updated with those details below?? no idea why yet - but only in new Cucumber
+@DataTableType(replaceWithEmptyString = "[blank]")
+public User convert(Map<String, String> entry){
+    return new User(
+            entry.get("login"),
+            entry.get("password")
+    );
+    //////////////////////////////////
+}
 
 	@Given("Customer is on official app web")
 	public void customer_is_on_official_app_web() {
@@ -50,6 +65,16 @@ public class LoginSteps {
     
 	}
 
+	@When("Customer enters correct or uncorrect login credentials from DBtables")
+	public void customer_enters_correct_or_uncorrect_login_credentials_from_d_btables(DataTable table) {
+		System.out.println("7. Enter credentials based on dataTables");
+		 //line below used for both techniques - possibilities
+        List<List<String>> cells = table.cells();
+        List<User> users = new ArrayList<User>();
+        users = table.asList(User.class);
+        for(User user:users){
+            System.out.println("the UserName is: "+ user.login);
+            System.out.println("the Password  is: "+ user.password);        
+	}
 
-	
 }
