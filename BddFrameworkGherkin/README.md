@@ -10,7 +10,6 @@ All pom dependencies are attached in this file as reference:
 ###Important notice: - version 6.6.0 of cucumber used for that project
 Version 6.6.0 attached - working version (known)
 
-
 Dependencies attached to that pom file:
 
 /**************************************
@@ -85,4 +84,12 @@ After that we need to create Test Runner (part of JUNIT library ) which runs our
 And the last part of that is create java class with all the steps - hoe to recreate test.
 That part is mapped with feature files - and is not necessarily  understood by business
 
-
+###
+Some of the dependencies can be replaced by only one dependency - which contains bulk of Cucumber dependencies
+ Cucumber  - java from "info cukes" groupId contains bulk of all needed cucumber / gherkin dependencies as below:
+ 
+   <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.5</version>
+        </dependency>
