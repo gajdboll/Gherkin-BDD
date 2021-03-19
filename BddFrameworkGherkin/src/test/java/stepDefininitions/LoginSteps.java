@@ -16,13 +16,17 @@ import io.cucumber.java.en.When;
 public class LoginSteps {
 /////////That listed part need to be added if we want to use nested class
 //new object need to be updated with those details below?? no idea why yet - but only in new Cucumber
-@DataTableType(replaceWithEmptyString = "[blank]")
+/*  Below internal nested class is the example of the sec way of DataTables presentation but it doesn t
+ * work with that version of Cucumber and is not used as much as the first idea
+ * The code below is commented and the end of that scrip which is part of that sec solution
+ * @DataTableType(replaceWithEmptyString = "[blank]")
+ *
 public User convert(Map<String, String> entry){
     return new User(
             entry.get("login"),
             entry.get("password")
     );
-    //////////////////////////////////
+   */ //////////////////////////////////
 }
 
 	@Given("Customer is on official app web")
@@ -64,7 +68,7 @@ public User convert(Map<String, String> entry){
         System.out.println("The value is : " + cells.get(1).get(1));
     
 	}
-
+/* sec part of the DataTable solution
 	@When("Customer enters correct or uncorrect login credentials from DBtables")
 	public void customer_enters_correct_or_uncorrect_login_credentials_from_d_btables(DataTable table) {
 		System.out.println("7. Enter credentials based on dataTables");
@@ -75,6 +79,6 @@ public User convert(Map<String, String> entry){
         for(User user:users){
             System.out.println("the UserName is: "+ user.login);
             System.out.println("the Password  is: "+ user.password);        
-	}
+	}*/
 
 }
