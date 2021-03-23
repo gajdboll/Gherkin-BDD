@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
+import BaseUtil.Base;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -22,30 +23,25 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginSteps {
 
-	WebDriver driver;
-	
-	@Before
-	public void Beginning( )
+	private Base base;
+	public LoginSteps(Base base)
 	{
-		System.out.println("1. Official web");
-	    WebDriverManager.chromedriver().setup();
-	   //System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
-	    driver = new ChromeDriver();
+		this.base = base;
 	}
-	
+
 	@Given("Customer is on official app web")
 	public void customer_is_on_official_app_web() {
 	    
-	    driver.get("http://demo.guru99.com/V4/");
-	    String url = driver.getCurrentUrl();
+		base.Driver.get("http://demo.guru99.com/V4/");
+	    String url = base.Driver.getCurrentUrl();
 	    System.out.println("Customer enters page "+url);   
 	}
 
 	@When("Customer enters correct login as {string} and enters correct password {string}")
 	public void customer_enters_correct_login_as_and_enters_correct_password(String login, String pass) {
 		System.out.println("2. Login process (correct credentials)");
-		WebElement loginField = driver.findElement(By.name("uid"));
-		WebElement passField = driver.findElement(By.name("password"));
+		WebElement loginField = base.Driver.findElement(By.name("uid"));
+		WebElement passField = base.Driver.findElement(By.name("password"));
 		loginField.click(); 	loginField.clear(); 	loginField.sendKeys(login);
 		passField.click(); 	passField.clear(); 	passField.sendKeys(pass);
 	}
@@ -53,7 +49,7 @@ public class LoginSteps {
 	@And("Customer clicks Login button")
 	public void customer_clicks_login_button() {
 		System.out.println("3. Button gets clicked");
-		WebElement loginBtn = driver.findElement(By.name("btnLogin"));
+		WebElement loginBtn = base.Driver.findElement(By.name("btnLogin"));
 		loginBtn.click();	
 	}
 
@@ -61,7 +57,7 @@ public class LoginSteps {
 	public void customer_is_successfully_logged_in_to_the_application() {
 		System.out.println("4. Successfully Logged In - Assertion");
 		String expectedHtmlUrl= "http://demo.guru99.com/V4/manager/Managerhomepage.php";
-		 String actualurl = driver.getCurrentUrl();
+		 String actualurl = base.Driver.getCurrentUrl();
 		 //Before Asserts were invented - we could use - is statements
 		if(expectedHtmlUrl.equalsIgnoreCase(actualurl)) { System.out.println("Success");} else {System.out.println("Failure - try it next time");}
 		Assert.assertEquals(actualurl,expectedHtmlUrl);
@@ -70,8 +66,8 @@ public class LoginSteps {
 	@When("^Customer enters correct (\\w+) and (\\w+)$")
 	public void customer_enters_correct_admin222_and_pass1(String login, String password) {
 		System.out.println("5. Scenario Outline - Credentials passed ");
-		WebElement loginField = driver.findElement(By.name("uid"));
-		WebElement passField = driver.findElement(By.name("password"));
+		WebElement loginField = base.Driver.findElement(By.name("uid"));
+		WebElement passField = base.Driver.findElement(By.name("password"));
 		loginField.click(); 	loginField.clear(); 	loginField.sendKeys(login);
 		passField.click(); 	passField.clear(); 	passField.sendKeys(password);
 	}
@@ -89,24 +85,15 @@ public class LoginSteps {
 		 //line below used for both techniques - possibilities
         List<List<String>> cells = table.cells();
         // quick way to hide selected code / text - > ctrl + Shift + "/"
-       // System.out.println("The value is : " + cells.get(1).get(0));
+        //System.out.println("The value is : " + cells.get(1).get(0));
         //System.out.println("The value is : " + cells.get(1).get(1));
-        WebElement loginField = driver.findElement(By.name("uid"));
-		WebElement passField = driver.findElement(By.name("password"));
+        WebElement loginField = base.Driver.findElement(By.name("uid"));
+		WebElement passField = base.Driver.findElement(By.name("password"));
 		loginField.click(); 	loginField.clear(); 	loginField.sendKeys(cells.get(1).get(0));
 		passField.click(); 	passField.clear(); 	passField.sendKeys(cells.get(1).get(1));
-        
-        
-        
-        
+    
 	}
-	@After
-	public void TernDown()
-	{ 
-		driver.close();
-		driver.quit();
-		
-	}
+	
 	
 
 }

@@ -8,8 +8,8 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 				features= {"FeatureFiles/Login.feature"},
-				glue= {"stepDefinitions"},
-				tags="~@Two,@One"
+				glue= {"stepDefinitions"}
+				//tags="~@Two,@One"   // tags works from this file only - they will not work if the project is entee
 				)
 public class LoginRunner {
 

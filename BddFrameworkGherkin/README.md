@@ -1,37 +1,16 @@
-# V3 Implementation of the Selenium code in terms of Front -End testing
+# V4 - Dependency Injection
 
-The sec part of resolution for DataTable section got removed (code didn't work with current version of Cucumber and can be found in the previous version of code)
-
-In this branch Selenium code will be attached to indicate how BDD code can be connected with selenium.
-
-webDriverManager will be used instead of downloading correct driver on the drive - that saves a time and all the instances of the driver can be found using that solution
-
-More information you can easly find by searching in the google search once typed WebDriverManager - git repository contains all necessary informations
-
-The other source of information is code presented on this branch: only correct dependencies are needed and one line of code is changes 
-(instead of SystemProperty with correct location of the chromedriver - WebDriverManager comes in place), and that saves the time and it is easy in use.
+Before we start that concept I will make small modification - > I will move all the hooks into the separate class Hook.java
+Then I will download cucumber picocontainer - because dependency Injection is not part of the Cucumber - and that dependency neeeds to be donwloaded if we want to test that
 
 
-## In this branch I have added concept of tags - because I didnt want to run all the test cases in one go
 
-If we want to use tags we need to inititate tag using @ symbol and word after words which specify the tag we want to run on each iteration
+Version we will use is: <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
 
-(1) The tags should appears in the feature file above needed scenario 
-(2) The rest of the journey is to include that tag in the testRunner file by adding tag word -> 
+    <artifactId>cucumber-picocontainer</artifactId>
+    <version>1.2.5</version>
+    
+    copied into the pom file
 
-@RunWith(Cucumber.class)
-@CucumberOptions(features="FeatureFiles",
-				glue= {"stepDefinitions"},
-				tags = "@Two"
-				)
-public class LoginRunner {}
-
-*Character ~ to skip the tags
-*OR or Comma : Runs the scenario if it has at least one give tag, there are separated with comma, all the tags will be included in one double quote like {"Sanity, smoke, regression"}
-*AND or Quotes : Runs the scenario if it has all the given tags, all the tags are separated with double quotes {"Sanity", "smoke", "regression"}
-
-## In this branch I have added concept of Hooks - to initiate what we always need to do on front before we start each test and in the end when we always finish test
-
-@After & @Before -> that s only 2 examples of cucumber annotations - they are many more but you can find them on official cucumber site
-
-
+Why do we need Dependency injection - most of the times we test using Selenium and then we use that technique which allows us to move driver (private) as a parameter of the constructor
+That allows to inject that driver ionto the class and safely run the steps

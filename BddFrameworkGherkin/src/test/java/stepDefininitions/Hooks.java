@@ -1,30 +1,40 @@
 package stepDefininitions;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import BaseUtil.Base;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /* That class is always run before each test and after each test*/
-public class Hooks {
+public class Hooks extends Base{
 
-/*	I will use that class later for Selenium implementation
+	private Base base;
+	public Hooks(Base base)
+	{
+		this.base = base;
+	}
+	
 	@Before
 	public void Beginning()
 	{
 		System.out.println("1. Official web");
 	    WebDriverManager.chromedriver().setup();
 	   //System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
-	    driver = new ChromeDriver();
+	    base.Driver= new ChromeDriver();
 	}
 	
 	@After
 	public void TernDown()
 	{ 
-		driver.close();
-		driver.quit();
+		base.Driver.close();
+		base.Driver.quit();
 		
 	}
 	
 	
-	*/
+	
 	
 }
