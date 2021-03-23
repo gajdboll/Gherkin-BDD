@@ -6,7 +6,19 @@ Feature: Testing of the Logging Application
   Background: 
     Given Customer is on official app web
 
- 
+  ############################   I   ################################
+  @One
+  Scenario Outline: Unsuccessful login to the app
+    #"amidn" & "password" is passed as argument in the method
+    When Customer enters correct <login> and <password> 
+    And Customer clicks Login button
+    Then Customer is re-directed to web with <Welcome>
+
+    Examples: 
+      | login      | password | Welcome                      |
+      | admin222   | pass1    | Guru - test                  |
+      | mngr312054 | yjabYvA  | Guru99 Bank Manager HomePage |
+
   ## Scenario for datatable scenario
   ############################   II   ####################################
   @Two
@@ -18,4 +30,9 @@ Feature: Testing of the Logging Application
     Then Customer is successfully Logged in to the application
 
   ###############################   III   #################################
- 
+  @Three
+  Scenario: Successful login to the app
+    #"amidn" & "password" is passed as argument in the method
+    When Customer enters correct login as "admin" and enters correct password "pass123"
+    And Customer clicks Login button
+    Then Customer is successfully Logged in to the application
