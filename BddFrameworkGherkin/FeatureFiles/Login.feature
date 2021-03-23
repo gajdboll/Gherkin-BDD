@@ -6,20 +6,22 @@ Feature: Testing of the Logging Application
   Background: 
     Given Customer is on official app web
 
-  #############################    I    ###############################
+  ############################   I   ################################
+  @One
   Scenario Outline: Unsuccessful login to the app
     #"amidn" & "password" is passed as argument in the method
-    When Customer enters correct <login> and <password>
+    When Customer enters correct <login> and <password> 
     And Customer clicks Login button
     Then Customer is re-directed to web with <Welcome>
 
     Examples: 
-      | login    | password | Welcome    |
-      | admin222 | pass1    | test       |
-      | test34   | pass2    | expected 2 |
+      | login      | password | Welcome                      |
+      | admin222   | pass1    | Guru - test                  |
+      | mngr312054 | yjabYvA  | Guru99 Bank Manager HomePage |
 
   ## Scenario for datatable scenario
-  #############################    II     ###################################
+  ############################   II   ####################################
+  @Two
   Scenario: Successful/unsuccessful login to the app DataTables prt I
     When Customer enters correct login credentials
       | login      | password |
@@ -27,15 +29,8 @@ Feature: Testing of the Logging Application
     And Customer clicks Login button
     Then Customer is successfully Logged in to the application
 
-  ###############################    III   #################################
-  Scenario: Successful/unsuccessful login to the app DataTables prt II
-    When Customer enters correct or uncorrect login credentials from DBtables
-      | login      | password |
-      | mngr312054 | yjabYvA  |
-    And Customer clicks Login button
-    Then Customer is successfully Logged in to the application
-
-  #############################   IV   ######################################
+  ###############################   III   #################################
+  @Three
   Scenario: Successful login to the app
     #"amidn" & "password" is passed as argument in the method
     When Customer enters correct login as "admin" and enters correct password "pass123"

@@ -21,9 +21,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LoginSteps {
+public class LoginSteps extends Base{
 
 	private Base base;
+	public LoginSteps( ) {}
+	//Dependency Injection
 	public LoginSteps(Base base)
 	{
 		this.base = base;

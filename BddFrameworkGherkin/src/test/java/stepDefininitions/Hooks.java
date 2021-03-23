@@ -12,6 +12,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Hooks extends Base{
 
 	private Base base;
+	public Hooks( )	{}
+	//Dependency Injection
 	public Hooks(Base base)
 	{
 		this.base = base;
@@ -21,8 +23,8 @@ public class Hooks extends Base{
 	public void Beginning()
 	{
 		System.out.println("1. Official web");
-	    WebDriverManager.chromedriver().setup();
-	   //System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
+	  //  WebDriverManager.chromedriver().setup();
+	   System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
 	    base.Driver= new ChromeDriver();
 	}
 	
