@@ -23,7 +23,7 @@ public class Hooks extends Base{
 	public void Beginning()
 	{
 		System.out.println("1. Official web");
-	  //  WebDriverManager.chromedriver().setup();
+	   // WebDriverManager.chromedriver().setup();
 	   System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
 	    base.Driver= new ChromeDriver();
 	}
