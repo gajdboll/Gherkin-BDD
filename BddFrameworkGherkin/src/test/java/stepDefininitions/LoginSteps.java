@@ -31,8 +31,6 @@ public class LoginSteps extends Base{
 	{
 		this.base = base;
 	}
-
-	
 	@Before
 	public void Beginning()
 	{
@@ -41,13 +39,11 @@ public class LoginSteps extends Base{
 	 //  System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
 		 Driver = new ChromeDriver();
 	}
-	
 	@After
 	public void TernDown()
 	{ 	Driver.close();
 		Driver.quit();		
-		System.out.println("End.");
-		
+		System.out.println("End.");	
 	}	
 	@Given("Customer is on official app web")
 	public void customer_is_on_official_app_web() {    
@@ -76,7 +72,8 @@ public class LoginSteps extends Base{
 		String expectedHtmlUrl= "http://demo.guru99.com/V4/manager/Managerhomepage.php";
 		 String actualurl = Driver.getCurrentUrl();
 		 //Before Asserts were invented - we could use - is statements
-		if(expectedHtmlUrl.equalsIgnoreCase(actualurl)) { System.out.println("Success");} else {System.out.println("Failure - try it next time");}
+		if(expectedHtmlUrl.equalsIgnoreCase(actualurl)) { System.out.println("Success");} else {	Driver.close();
+		Driver.quit();		System.out.println("Failure - try it next time");}
 		Assert.assertEquals(actualurl,expectedHtmlUrl);
 }
 	//those (\\w+) when they are passed as arguments - or (.*) too
@@ -93,7 +90,8 @@ public class LoginSteps extends Base{
 	public void customer_is_re_directed_to_web_with_test(String Welcome) {
 		System.out.println("6. Moved to Web - with text - Assertion");
 		String expectedTab= "Guru99 Bank Manager HomePage";
-		if(Welcome.equalsIgnoreCase(expectedTab)) { System.out.println("Success");} else {System.out.println("Failure - try it next time");}
+		if(Welcome.equalsIgnoreCase(expectedTab)) { System.out.println("Success");} else {	Driver.switchTo().alert().accept();	System.out.println("Failure - try it next time");
+			}
 		Assert.assertEquals(Welcome,expectedTab);	
 	}
 	@When("Customer enters correct login credentials")
