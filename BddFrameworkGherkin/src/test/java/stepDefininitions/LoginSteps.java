@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 import BaseUtil.Base;
+import Pages.LoginPages;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -55,16 +56,15 @@ public class LoginSteps extends Base{
 	@When("Customer enters correct login as {string} and enters correct password {string}")
 	public void customer_enters_correct_login_as_and_enters_correct_password(String login, String pass) {
 		System.out.println("2. Login process (correct credentials)");
-		WebElement loginField = Driver.findElement(By.name("uid"));
-		WebElement passField = Driver.findElement(By.name("password"));
-		loginField.click(); 	loginField.clear(); 	loginField.sendKeys(login);
-		passField.click(); 	passField.clear(); 	passField.sendKeys(pass);
+		LoginPages page = new LoginPages(Driver);
+		page.EnterLoginCredentials(login, pass);
 	}
 	@And("Customer clicks Login button")
 	public void customer_clicks_login_button() {
 		System.out.println("3. Button gets clicked");
-		WebElement loginBtn = Driver.findElement(By.name("btnLogin"));
-		loginBtn.click();	
+		//WebElement loginBtn = Driver.findElement(By.name("btnLogin"));
+		LoginPages page = new LoginPages(Driver);
+		page.ClickLogin();
 	}
 	@Then("Customer is successfully Logged in to the application")
 	public void customer_is_successfully_logged_in_to_the_application() {
@@ -80,16 +80,15 @@ public class LoginSteps extends Base{
 	@When("^Customer enters correct (\\w+) and (\\w+)$")
 	public void customer_enters_correct_admin222_and_pass1(String login, String password) {
 		System.out.println("5. Scenario Outline - Credentials passed ");
-		WebElement loginField =Driver.findElement(By.name("uid"));
-		WebElement passField = Driver.findElement(By.name("password"));
-		loginField.click(); 	loginField.clear(); 	loginField.sendKeys(login);
-		passField.click(); 	passField.clear(); 	passField.sendKeys(password);
+		LoginPages page = new LoginPages(Driver);
+		page.EnterLoginCredentials(login, password);
 	}
 	//those (\\w+) when they are passed as arguments - or (.*) too
 	@Then("^Customer is re-directed to web with (.*)$")
 	public void customer_is_re_directed_to_web_with_test(String Welcome) {
 		System.out.println("6. Moved to Web - with text - Assertion");
 		String expectedTab= "Guru99 Bank Manager HomePage";
+		//below there is error handler - driver
 		if(Welcome.equalsIgnoreCase(expectedTab)) { System.out.println("Success");} else {	Driver.switchTo().alert().accept();	System.out.println("Failure - try it next time");
 			}
 		Assert.assertEquals(Welcome,expectedTab);	
@@ -102,9 +101,8 @@ public class LoginSteps extends Base{
         // quick way to hide selected code / text - > ctrl + Shift + "/"
         //System.out.println("The value is : " + cells.get(1).get(0));
         //System.out.println("The value is : " + cells.get(1).get(1));
-        WebElement loginField = Driver.findElement(By.name("uid"));
-		WebElement passField = Driver.findElement(By.name("password"));
-		loginField.click(); 	loginField.clear(); 	loginField.sendKeys(cells.get(1).get(0));
-		passField.click(); 	passField.clear(); 	passField.sendKeys(cells.get(1).get(1));   
+        LoginPages page = new LoginPages(Driver);
+		page.EnterLoginCredentials(cells.get(1).get(0), cells.get(1).get(1));
+		
 	}
 }

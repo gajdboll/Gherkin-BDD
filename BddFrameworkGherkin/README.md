@@ -1,23 +1,24 @@
-# V4 - Dependency Injection
+# V5 Page Object Model/ Pattern - POM
 
-Before we start that concept I will make small modification - > I will move all the hooks into the separate class Hook.java
-Then I will download cucumber picocontainer - because dependency Injection is not part of the Cucumber - and that dependency neeeds to be donwloaded if we want to test that
+POM is used to group all the pages in separate classes - all those classes usually are in the separate package too so the y are orginized.
+In our example we created Pages package and inside we created Login Page class which contain all the elements and etc. - check the code
 
+Below you will find the way we initializing elements on the page
 
-
-Version we will use is: <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
-
-    <artifactId>cucumber-picocontainer</artifactId>
-    <version>1.2.5</version>
-    
-    copied into the pom file
-
-Why do we need Dependency injection - most of the times we test using Selenium and then we use that technique which allows us to move driver (private) as a parameter of the constructor
-That allows to inject that driver into the class and safely run the steps
-
-
-###Usually we use separate class to keep all the Hooks - but for some reason our cucumber doesnt like that so i will keep
-###all the hooks and steps in one class and that will allow us to progress.
-
-btw Dependency Injection is passing object as the constructor parameter to the next class so it would be accessible in other class - especially Driver - 
-dont forger to access private parameter before you will create constructor in the class (for some reason base prefix doesnt need to be mention / or it shouldnt be mention in terms of working the framework)
+@FindBy(how = How.NAME, using ="uid")
+	public WebElement UserName;
+	
+	Once that is done we create methods that we can  re-use later in the LoginDefinitions
+	The only thing is that in the definitioSteps page we need to create object before we call methods from, Page package (POM class)
+	
+	The last but not at least is to create Constuctor in the LoginPage POM class
+	
+	public LoginPages(WebDriver driver)
+	{
+		PageFactory.initElements(driver,this);
+	}
+	PageFactory is run inside contructor so it s responsible to create all elements from the page - and it has driver in the parameter do initialise the page.
+	Not the best practice but we will change it later - that only allows us to move to the next level of testing
+	
+	The last step is make changes to each step - and in each step create Object of the page we are working on - our case Login page
+	and then next run the method - all the details you can see in the code
