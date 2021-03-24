@@ -24,6 +24,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class LoginSteps extends Base{
 
 	private Base base;
+	//private WebDriver Driver;
 	public LoginSteps( ) {}
 	//Dependency Injection
 	public LoginSteps(Base base)
@@ -31,45 +32,59 @@ public class LoginSteps extends Base{
 		this.base = base;
 	}
 
+	
+	@Before
+	public void Beginning()
+	{
+		System.out.println("1. Official web");
+	    WebDriverManager.chromedriver().setup();
+	 //  System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
+		 Driver = new ChromeDriver();
+	}
+	
+	@After
+	public void TernDown()
+	{ 	Driver.close();
+		Driver.quit();		
+		System.out.println("End.");
+		
+	}	
 	@Given("Customer is on official app web")
-	public void customer_is_on_official_app_web() {
-	    
-		base.Driver.get("http://demo.guru99.com/V4/");
-	    String url = base.Driver.getCurrentUrl();
+	public void customer_is_on_official_app_web() {    
+		//base.Driver.get("http://demo.guru99.com/V4/");
+		Driver.navigate().to("http://demo.guru99.com/V4/");
+	    String url = Driver.getCurrentUrl();
 	    System.out.println("Customer enters page "+url);   
 	}
-
 	@When("Customer enters correct login as {string} and enters correct password {string}")
 	public void customer_enters_correct_login_as_and_enters_correct_password(String login, String pass) {
 		System.out.println("2. Login process (correct credentials)");
-		WebElement loginField = base.Driver.findElement(By.name("uid"));
-		WebElement passField = base.Driver.findElement(By.name("password"));
+		WebElement loginField = Driver.findElement(By.name("uid"));
+		WebElement passField = Driver.findElement(By.name("password"));
 		loginField.click(); 	loginField.clear(); 	loginField.sendKeys(login);
 		passField.click(); 	passField.clear(); 	passField.sendKeys(pass);
 	}
-	
 	@And("Customer clicks Login button")
 	public void customer_clicks_login_button() {
 		System.out.println("3. Button gets clicked");
-		WebElement loginBtn = base.Driver.findElement(By.name("btnLogin"));
+		WebElement loginBtn = Driver.findElement(By.name("btnLogin"));
 		loginBtn.click();	
 	}
-
 	@Then("Customer is successfully Logged in to the application")
 	public void customer_is_successfully_logged_in_to_the_application() {
 		System.out.println("4. Successfully Logged In - Assertion");
 		String expectedHtmlUrl= "http://demo.guru99.com/V4/manager/Managerhomepage.php";
-		 String actualurl = base.Driver.getCurrentUrl();
+		 String actualurl = Driver.getCurrentUrl();
 		 //Before Asserts were invented - we could use - is statements
 		if(expectedHtmlUrl.equalsIgnoreCase(actualurl)) { System.out.println("Success");} else {System.out.println("Failure - try it next time");}
 		Assert.assertEquals(actualurl,expectedHtmlUrl);
-	}
+}
 	//those (\\w+) when they are passed as arguments - or (.*) too
 	@When("^Customer enters correct (\\w+) and (\\w+)$")
 	public void customer_enters_correct_admin222_and_pass1(String login, String password) {
 		System.out.println("5. Scenario Outline - Credentials passed ");
-		WebElement loginField = base.Driver.findElement(By.name("uid"));
-		WebElement passField = base.Driver.findElement(By.name("password"));
+		WebElement loginField =Driver.findElement(By.name("uid"));
+		WebElement passField = Driver.findElement(By.name("password"));
 		loginField.click(); 	loginField.clear(); 	loginField.sendKeys(login);
 		passField.click(); 	passField.clear(); 	passField.sendKeys(password);
 	}
@@ -78,8 +93,8 @@ public class LoginSteps extends Base{
 	public void customer_is_re_directed_to_web_with_test(String Welcome) {
 		System.out.println("6. Moved to Web - with text - Assertion");
 		String expectedTab= "Guru99 Bank Manager HomePage";
-		Assert.assertEquals(Welcome,expectedTab);
-		
+		if(Welcome.equalsIgnoreCase(expectedTab)) { System.out.println("Success");} else {System.out.println("Failure - try it next time");}
+		Assert.assertEquals(Welcome,expectedTab);	
 	}
 	@When("Customer enters correct login credentials")
 	public void enterCredentialsFromDataTable(DataTable table) {
@@ -89,13 +104,9 @@ public class LoginSteps extends Base{
         // quick way to hide selected code / text - > ctrl + Shift + "/"
         //System.out.println("The value is : " + cells.get(1).get(0));
         //System.out.println("The value is : " + cells.get(1).get(1));
-        WebElement loginField = base.Driver.findElement(By.name("uid"));
-		WebElement passField = base.Driver.findElement(By.name("password"));
+        WebElement loginField = Driver.findElement(By.name("uid"));
+		WebElement passField = Driver.findElement(By.name("password"));
 		loginField.click(); 	loginField.clear(); 	loginField.sendKeys(cells.get(1).get(0));
-		passField.click(); 	passField.clear(); 	passField.sendKeys(cells.get(1).get(1));
-    
+		passField.click(); 	passField.clear(); 	passField.sendKeys(cells.get(1).get(1));   
 	}
-	
-	
-
 }
