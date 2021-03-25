@@ -159,7 +159,7 @@ public User convert(Map<String, String> entry){
 
 	@When("Customers login is the prefix for {string} domain")
 	public void customers_login_is_the_prefix_for_email_domain(@Transform (EmailTransform.class)String email) {
-	    System.out.println("2.0 - Result is: "+ email);
+	    System.out.println("2.0 - Result is: "+ email );
 	}
 
 	@When("^Numbers of characters in the correct (\\w+) length$")

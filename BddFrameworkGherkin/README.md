@@ -1,34 +1,31 @@
-# V6 - Update of Existing code (add additional feature files & scenarios) & Transformations using Cucumber
+# V7 Cucumber &Maven 
 
+To do that we need 2 plugins :]
+-Maven Compiler plugin (allows to cleaan, run etc . project - we will find out all sets of all the new commands for that)
+- Maven serefire plugin - which generate 2 version of reports - used in test phase to execute unit tests of application
+	(*txt report , *.xml report) - => by default created at location ${basedir/target/selfire-reports}
+	
+	in the pom file we ad on top tags<build></build> inside <plugins></plugins>then inside <plugin></plugin> and inside the plugin we add those dependencies.
+	Dependecy tags needs to be removed
+	
+	
+-clean – usuwa folder target, czyli skompilowany kod
+-validate – waliduje projekt i sprawdza obecność wszystkich potrzebnych informacji do kompilacji
+-compile – kompiluje kod projektu
+-test – kompiluje i uruchamia testy jednostkowe
+-package – kompiluje i pakuje kod do zadanego formatu, na przykład *.jar, czyli tworzy tzw. paczkę dystrybucyjną
+-verify – uruchamia „check” zdefiniowany w projekcie w celu sprawdzenia czy utworzona paczka dystrybucyjna jest poprawna
+-install – instaluje paczkę dystrybucyjną do lokalnego repozytorium, tak aby inne projekty mogły z niego korzystać
+-site – generuje dokumentację projektu
+-deploy – kopiuje ostateczną paczkę projektu do zdalnego repozytorium
 
-First I created additional Login2.feature file with additional approach for DataTables - Solution2
+Poszczególne fazy mogą być od siebie zależne. Na przykład wywołanie komendy deploy będzie wymagać wcześniejszego utworzenia paczki dystrybucyjnej.
+W ostatnim akapicie pojawiły nam się takie zwroty jak paczka dystrybucyjna, repozytorium. Należy je sobie wytłumaczyć.
 
-That sec solution is handled by creating nested User class in the stepDefinition
+Paczka dystrybucyjna to skompilowany i zbudowany kod w formie na przykład pliku *.jar, *.war lub innego w zależności od ustawień projektu. Większość projektów javowych typu open source jest w ten sposób dystrybuowana przez Internet.
 
-Transformation:
-- Extend Transformer <> class for the type to be transformed
-- Override transform method
-- call @ Transform annotation as parameter in calling method param
+Repozytorium zaś to nic innego jak zbiór plików dystrybucyjnych składających się z wielu artefaktów (plików) w różnych wersjach. Jednym z takich artefaktów jest na przykład Selenium czy TestNG, którego będziemy używać. Repozytoria można podzielić na:
 
-all the changes are made for new created Feature file (Login2.feature) and that change should only expalin how to use that transform solution - the solution is not making more seanse
-
-Steps:
-1) Create additional steps where transformation should make a place like:
-- And Customers login is the prefix for email domain
-- And Numbers of characters in the correct password length
-
-then Create new package - lets call it Transformation and inside we create class called Email transformation - so that class will allow to make changes to the certain step (email
-and it makes changes toi email field)
-that class needs to be "extends Transformer"
-Inside that class we create overridden  transform method whi we will use to make our changes.
-Once our method is done and the body is implemented we come back to stepDefinitions
-
-In the method - step we want to make chgange we simply add in th parameter part (@Ttransform(nazwaKlasyZKtorejMamyWykorzystac zmiany.class) typ parameter przekazywany) 
-eg public void Login(@Transform(EnterLogin.class) String login){})
-
-that is all :)
-
-BTW - @Override transform method has only one parameter passed as the argument
-
-The other thing is that Transformer work - as it s not making any errors to me on the screen, however the purpose of that is not met.
-transformed variable is not passed to the step 
+Lokalne – przykładem takiego repozytorium jest nasz komputer, na którym mamy zainstalowanego Mavena. Jeśli na takim komputerze uruchomimy teraz kod źródłowy, którego projekt będzie projektem mavenowym z komendą „install”, to u nas na komputerze zostanie utworzona paczka tego projektu oraz zainstalowana do naszego lokalnego repozytorium.
+Zdalne – są to repozytoria w Internecie, z reguły ogólnodostępne. Przykładem takiego repozytorium jest https://mvnrepository.com/. Innym przykładem może być repozytorium firmowe.
+Jest to tylko wstęp do Mavena. Jeśli chcesz dowiedzieć się więcej zapoznaj się z oficjalną dokumentacją Mavena dostępną pod adresem: http://maven.apache.org/guides/

@@ -5,9 +5,9 @@ import cucumber.api.Transformer;
 public class EmailTransform extends Transformer<String>{
 	
 	@Override	
-	public String transform(String email)
+	public String transform(String _email)
 	{
-		return email.concat("@gajdzio.com");
+		return _email.concat("@gajdzio.com");
 	}
 	
 	
