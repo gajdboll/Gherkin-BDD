@@ -12,6 +12,10 @@ import org.testng.Assert;
 
 import BaseUtil.Base;
 import Pages.LoginPages;
+import Transformation.CorrectCredentials;
+import Transformation.EmailTransform;
+import Transformation.PassLength;
+import cucumber.api.Transform;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -32,6 +36,15 @@ public class LoginSteps extends Base{
 	{
 		this.base = base;
 	}
+//////////That listed part need to be added if we want to use nested class
+//new object need to be updated with those details below?? no idea why yet - but only in new Cucumber
+@DataTableType(replaceWithEmptyString = "[blank]")
+public User convert(Map<String, String> entry){
+  return new User(
+          entry.get("login"),
+          entry.get("password")
+  );
+}
 	@Before
 	public void Beginning()
 	{
@@ -62,7 +75,6 @@ public class LoginSteps extends Base{
 	@And("Customer clicks Login button")
 	public void customer_clicks_login_button() {
 		System.out.println("3. Button gets clicked");
-		//WebElement loginBtn = Driver.findElement(By.name("btnLogin"));
 		LoginPages page = new LoginPages(Driver);
 		page.ClickLogin();
 	}
@@ -70,8 +82,8 @@ public class LoginSteps extends Base{
 	public void customer_is_successfully_logged_in_to_the_application() {
 		System.out.println("4. Successfully Logged In - Assertion");
 		String expectedHtmlUrl= "http://demo.guru99.com/V4/manager/Managerhomepage.php";
-		 String actualurl = Driver.getCurrentUrl();
-		 //Before Asserts were invented - we could use - is statements
+		String actualurl = Driver.getCurrentUrl();
+		//Before Asserts were invented - we could use - is statements
 		if(expectedHtmlUrl.equalsIgnoreCase(actualurl)) { System.out.println("Success");} else {	Driver.close();
 		Driver.quit();		System.out.println("Failure - try it next time");}
 		Assert.assertEquals(actualurl,expectedHtmlUrl);
@@ -104,5 +116,54 @@ public class LoginSteps extends Base{
         LoginPages page = new LoginPages(Driver);
 		page.EnterLoginCredentials(cells.get(1).get(0), cells.get(1).get(1));
 		
+	}
+	@When("Customer enters correct login credentials2")
+	public void customer_enters_correct_login_credentials2(io.cucumber.datatable.DataTable table) {
+		 //method raw no longer exist so we are using method cell to get access to cels
+        //line below used for both techniques - possibilities
+        List<List<String>> cells = table.cells();
+        // quick way to hide selected code / text - > ctrl + Shift + "/"
+        WebElement loginField = Driver.findElement(By.name("uid"));
+        WebElement passField = Driver.findElement(By.name("password"));
+ 
+       ///////////////////////////////////////////
+        //sec posibility is : create an array list of users which stores all users
+        List<User> users = new ArrayList<User>();
+        users = table.asList(User.class);
+        for(User user:users){
+            System.out.println("the UserName is: "+ user.login);
+            loginField.sendKeys(user.login);
+            
+            System.out.println("the Password  is: "+ user.password);
+            passField.sendKeys(user.password);
+        }
+	
+	}
+	//class used for DataTable example
+	public class User {
+        public String login;
+        public String password;
+
+        public User(String login, String password) {
+            this.login = login;
+            this.password = password;
+        }
+    }
+	//new methods for Tranformation scenario
+	
+	
+	@When("^Customer enters correct login & (\\w+)$")
+	public void customer_enters_correct_credentials(@Transform (CorrectCredentials.class) String password) {
+		 System.out.println("1.0 - Password is: " + password);
+	}
+
+	@When("Customers login is the prefix for {string} domain")
+	public void customers_login_is_the_prefix_for_email_domain(@Transform (EmailTransform.class)String email) {
+	    System.out.println("2.0 - Result is: "+ email);
+	}
+
+	@When("^Numbers of characters in the correct (\\w+) length$")
+	public void numbers_of_characters_in_the_correct_password_length(@Transform(PassLength.class)String password) {
+		System.out.println("3.0 - Result is: "+ password);
 	}
 }

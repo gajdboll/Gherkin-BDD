@@ -1,24 +1,34 @@
-# V5 Page Object Model/ Pattern - POM
+# V6 - Update of Existing code (add additional feature files & scenarios) & Transformations using Cucumber
 
-POM is used to group all the pages in separate classes - all those classes usually are in the separate package too so the y are orginized.
-In our example we created Pages package and inside we created Login Page class which contain all the elements and etc. - check the code
 
-Below you will find the way we initializing elements on the page
+First I created additional Login2.feature file with additional approach for DataTables - Solution2
 
-@FindBy(how = How.NAME, using ="uid")
-	public WebElement UserName;
-	
-	Once that is done we create methods that we can  re-use later in the LoginDefinitions
-	The only thing is that in the definitioSteps page we need to create object before we call methods from, Page package (POM class)
-	
-	The last but not at least is to create Constuctor in the LoginPage POM class
-	
-	public LoginPages(WebDriver driver)
-	{
-		PageFactory.initElements(driver,this);
-	}
-	PageFactory is run inside contructor so it s responsible to create all elements from the page - and it has driver in the parameter do initialise the page.
-	Not the best practice but we will change it later - that only allows us to move to the next level of testing
-	
-	The last step is make changes to each step - and in each step create Object of the page we are working on - our case Login page
-	and then next run the method - all the details you can see in the code
+That sec solution is handled by creating nested User class in the stepDefinition
+
+Transformation:
+- Extend Transformer <> class for the type to be transformed
+- Override transform method
+- call @ Transform annotation as parameter in calling method param
+
+all the changes are made for new created Feature file (Login2.feature) and that change should only expalin how to use that transform solution - the solution is not making more seanse
+
+Steps:
+1) Create additional steps where transformation should make a place like:
+- And Customers login is the prefix for email domain
+- And Numbers of characters in the correct password length
+
+then Create new package - lets call it Transformation and inside we create class called Email transformation - so that class will allow to make changes to the certain step (email
+and it makes changes toi email field)
+that class needs to be "extends Transformer"
+Inside that class we create overridden  transform method whi we will use to make our changes.
+Once our method is done and the body is implemented we come back to stepDefinitions
+
+In the method - step we want to make chgange we simply add in th parameter part (@Ttransform(nazwaKlasyZKtorejMamyWykorzystac zmiany.class) typ parameter przekazywany) 
+eg public void Login(@Transform(EnterLogin.class) String login){})
+
+that is all :)
+
+BTW - @Override transform method has only one parameter passed as the argument
+
+The other thing is that Transformer work - as it s not making any errors to me on the screen, however the purpose of that is not met.
+transformed variable is not passed to the step 
