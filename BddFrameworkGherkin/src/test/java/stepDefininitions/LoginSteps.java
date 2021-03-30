@@ -127,8 +127,6 @@ public User convert(Map<String, String> entry){
         // quick way to hide selected code / text - > ctrl + Shift + "/"
         WebElement loginField = Driver.findElement(By.name("uid"));
         WebElement passField = Driver.findElement(By.name("password"));
- 
-       ///////////////////////////////////////////
         //sec posibility is : create an array list of users which stores all users
         List<User> users = new ArrayList<User>();
         users = table.asList(User.class);
@@ -168,4 +166,10 @@ public User convert(Map<String, String> entry){
 	public void numbers_of_characters_in_the_correct_password_length(@Transform(PassLength.class)String password) {
 		System.out.println("3.0 - Result is: "+ password);
 	}
+	
+	
+
+ 
+
+
 }
