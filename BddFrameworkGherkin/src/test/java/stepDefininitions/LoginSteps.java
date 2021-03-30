@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import BaseUtil.Base;
 import Pages.LoginPages;
@@ -78,6 +79,7 @@ public User convert(Map<String, String> entry){
 		LoginPages page = new LoginPages(Driver);
 		page.ClickLogin();
 	}
+	
 	@Then("Customer is successfully Logged in to the application")
 	public void customer_is_successfully_logged_in_to_the_application() {
 		System.out.println("4. Successfully Logged In - Assertion");

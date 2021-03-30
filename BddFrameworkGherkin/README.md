@@ -29,3 +29,33 @@ Repozytorium zaś to nic innego jak zbiór plików dystrybucyjnych składającyc
 Lokalne – przykładem takiego repozytorium jest nasz komputer, na którym mamy zainstalowanego Mavena. Jeśli na takim komputerze uruchomimy teraz kod źródłowy, którego projekt będzie projektem mavenowym z komendą „install”, to u nas na komputerze zostanie utworzona paczka tego projektu oraz zainstalowana do naszego lokalnego repozytorium.
 Zdalne – są to repozytoria w Internecie, z reguły ogólnodostępne. Przykładem takiego repozytorium jest https://mvnrepository.com/. Innym przykładem może być repozytorium firmowe.
 Jest to tylko wstęp do Mavena. Jeśli chcesz dowiedzieć się więcej zapoznaj się z oficjalną dokumentacją Mavena dostępną pod adresem: http://maven.apache.org/guides/
+
+
+##Test NG is included in the branch 
+We will try to add that framework to our project: 
+
+1) the main thing is to extends our TestRunner class with: AbstractTestNGCucumberTests - but then we can remove attribute @RunWith
+Once that is done we need to make sure that TestNG & Cucumber TestNG  dependencies are added to that project
+
+
+<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>1.2.5</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.1.0</version>
+    <scope>test</scope>
+</dependency>
+
+
+That approach doesnt work with me however it works with others - I need to look into later to establish what cause it :")
+
+
+
+
+
