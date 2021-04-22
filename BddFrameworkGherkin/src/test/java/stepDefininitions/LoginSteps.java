@@ -168,8 +168,29 @@ public User convert(Map<String, String> entry){
 	}
 	
 	
+@Given("I want to write a step with precondition <name>")
+public void i_want_to_write_a_step_with_precondition_name() {
+	System.out.println("Then1");
+}
 
- 
+@When("I check for the <value> in step")
+public void i_check_for_the_value_in_step() {
+	System.out.println("Then2");
+}
 
+@Then("I validate the outcomes")
+public void i_validate_the_outcomes() {
+	System.out.println("Then3");
+}
+
+@Then("I verify the success in step")
+public void i_verify_the_success_in_step() {
+	System.out.println("Then4");
+}
+
+@Then("I verify the Fail in step")
+public void i_verify_the_fail_in_step() {
+	System.out.println("Then8");
+}
 
 }

@@ -10,7 +10,7 @@ Feature: Testing of the Logging Application
     Then Customer is successfully Logged in to the application
     
     
-    Scenario: Transformation construct used for Login to the page
+    Scenario Outline: Transformation construct used for Login to the page
     Given Customer is on official app web
     When Customer enters correct login & <password>
      

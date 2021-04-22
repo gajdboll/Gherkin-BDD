@@ -5,8 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import BaseUtil.Base;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 /* That class is always run before each test and after each test*/
