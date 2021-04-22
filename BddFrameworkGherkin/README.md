@@ -72,6 +72,17 @@ Dependencies attached to that pom file:
             <version>4.12</version>
             <scope>test</scope>
    
+   
+   ==============================
+   
+   # Example of Test Runner 
+   
+   Make sure in the Feature directly you will enter correct explicit directry as below
+   @RunWith(Cucumber.class)
+@CucumberOptions(features="C:\\Users\\kgajdosz\\Documents\\bench learning\\BENCH-Woof\\WooF\\src\\Woofoo\\FeatureFiles\\XlsTest.feature"
+,plugin = { "pretty", "html:target/cucumber-reports/index.html" ,"json:target/cucumber-reports/Cucumber.json" },glue= {"Steps"},monochrome = true)
+ 
+ ********************************
 *****************************************/
 ###The first step is to create FOLDER / directory (not a package with feature files)
 
@@ -87,6 +98,7 @@ That part is mapped with feature files - and is not necessarily  understood by b
 ###
 Some of the dependencies can be replaced by only one dependency - which contains bulk of Cucumber dependencies
  Cucumber  - java from "info cukes" groupId contains bulk of all needed cucumber / gherkin dependencies as below:
+ However try to use original io.cucumber dependencies - dont mix group ID's use the same version s if you can 
  
    <dependency>
             <groupId>info.cukes</groupId>
