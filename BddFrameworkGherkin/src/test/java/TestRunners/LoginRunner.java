@@ -7,10 +7,16 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-				features= {"FeatureFiles/Login.feature"},
-				glue= {"stepDefinitions"}
-				//tags="~@Two,@One"   // tags works from this file only - they will not work if the project is entee
-				)
+		
+features="C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\FeatureFiles", 
+glue= {"stepDefininitions"},tags= "@One"
+,monochrome = true,
+plugin = { "pretty", "html:target/HTMLReport/HTMLREPORT.html",
+"junit:target/JunitReport/report.xml",
+"json:target/JsonReport/report.json"}
+ 
+)
+
 public class LoginRunner {
 
 }

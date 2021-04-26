@@ -151,19 +151,5 @@ public User convert(Map<String, String> entry){
     }
 	//new methods for Tranformation scenario
 	
-	
-	@When("^Customer enters correct login & (\\w+)$")
-	public void customer_enters_correct_credentials(@Transform (CorrectCredentials.class) String password) {
-		 System.out.println("1.0 - Password is: " + password);
-	}
 
-	@When("Customers login is the prefix for {string} domain")
-	public void customers_login_is_the_prefix_for_email_domain(@Transform (EmailTransform.class)String email) {
-	    System.out.println("2.0 - Result is: "+ email);
-	}
-
-	@When("^Numbers of characters in the correct (\\w+) length$")
-	public void numbers_of_characters_in_the_correct_password_length(@Transform(PassLength.class)String password) {
-		System.out.println("3.0 - Result is: "+ password);
-	}
 }
