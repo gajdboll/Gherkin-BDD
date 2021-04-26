@@ -15,31 +15,13 @@ you can always try to use extand technowue however you will get cucumber error s
 
 Example below:
 
-???????????????????????????????????????????????????????????????????????????????
-? Share your Cucumber Report with your team at https://reports.cucumber.io    ?
-? Activate publishing with one of the following:                              ?
-?                                                                             ?
-? src/test/resources/cucumber.properties:    cucumber.publish.enabled=true    ?
-? Environment variable:                      CUCUMBER_PUBLISH_ENABLED=true    ?
-? JUnit:                                     @CucumberOptions(publish = true) ?
-?                                                                             ?
-? More information at https://reports.cucumber.io/docs/cucumber-jvm           ?
-?                                                                             ?
-? To disable this message, add cucumber.publish.quiet=true to                 ?
-? src/test/resources/cucumber.properties                                      ?
-???????????????????????????????????????????????????????????????????????????????
+
 Exception in thread "main" io.cucumber.core.exception.CompositeCucumberException: There were 4 exceptions:
   io.cucumber.java.InvalidMethodException(You're not allowed to extend classes that define Step Definitions or hooks. class stepDefininitions.Hooks extends class stepDefininitions.LoginSteps)
   io.cucumber.java.InvalidMethodException(You're not allowed to extend classes that define Step Definitions or hooks. class stepDefininitions.Hooks extends class stepDefininitions.LoginSteps)
   io.cucumber.java.InvalidMethodException(You're not allowed to extend classes that define Step Definitions or hooks. class stepDefininitions.Hooks extends class stepDefininitions.LoginSteps)
   io.cucumber.java.InvalidMethodException(You're not allowed to extend classes that define Step Definitions or hooks. class stepDefininitions.Hooks extends class stepDefininitions.LoginSteps)
-	at io.cucumber.core.runtime.CucumberExecutionContext.getException(CucumberExecutionContext.java:84)
-	at io.cucumber.core.runtime.Runtime.run(Runtime.java:103)
-	at io.cucumber.core.cli.Main.run(Main.java:79)
-	at cucumber.api.cli.Main.run(Main.java:30)
-	at cucumber.api.cli.Main.main(Main.java:15)
-
-
+	
 *****************************************************************************************************************
 
 ##What are Cucumber Tags?
