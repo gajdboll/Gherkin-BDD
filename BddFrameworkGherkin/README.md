@@ -1,4 +1,4 @@
-# V8 - > Reporting in Cucumber
+# V8 - > Reporting in Cucumber - Maven reporting
 
 
 To create simple josn or html reporting we add additional paramerter in the testRunner class
@@ -16,19 +16,19 @@ First we add dependency from github into the plugins section
 
     <groupId>net.masterthought</groupId>
     <artifactId>maven-cucumber-reporting</artifactId>
-    <version>(check version above)</version>
+    <version>(check version above example 3.0.0)</version>
 
 	<executions>
 		<execution>
 			<id>executions</id>
 			<phase>verify</phase>
-			<goals>
-			<goal>generate</goal>
-			</goals>
+				<goals>
+					<goal>generate</goal>
+				</goals>
 			<configuration>
-			<projectName>Project name</projectName>
-			<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
-			<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+			<projectName>Project name - Bdd Project</projectName>
+				<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+				<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
 			</configuration>
 		</execution>
 	</executions>
