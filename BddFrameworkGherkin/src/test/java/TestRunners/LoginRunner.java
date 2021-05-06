@@ -5,6 +5,8 @@ import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
+// That test is run through JUnit
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
