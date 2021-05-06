@@ -1,14 +1,15 @@
 # V8 - > Reporting in Cucumber - Maven reporting
 
 
-To create simple josn or html reporting we add additional paramerter in the testRunner class
+To create simple json or html reporting we add additional paramerter in the testRunner class
 
 
 below code replaced format version
  monochrome = true,plugin = {"html:target/cucumber-html-report", "json:target/cucumber-json-report.json" }
 
 Once we have done that we can use Reporting system created by developer and we can download are read it thhrough from
-https://github.com/damianszczepanik/cucumber-reporting (however we will use similar patch but got it from mvn dependenci / repository )because the one from the github should be used as a dependency not a plugin
+https://github.com/damianszczepanik/cucumber-reporting (however we will use similar patch but got it from mvn dependencies / repository )
+because the one from the github should be used as a dependency not a plugin
 
 First we add dependency from github into the plugins section
 
@@ -34,7 +35,7 @@ First we add dependency from github into the plugins section
 	</executions>
 from line 21 we added few lines because we will run that test from cmd / maven to prove that is working fine  
 
-then we go to the source sttructure of the project (cmd structure source) and we type mvn clean - to remove all the target (all the previous runs)
+then we go to the source structure of the project (cmd structure source) and we type mvn clean - to remove all the target (all the previous runs)
 
 then we enter mvn compile
 
@@ -182,14 +183,8 @@ On top of that we need to add additional configuration for maven-surfire-plugin 
 		</dependency>
         
 		
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
-<dependency>
-    <groupId>info.cukes</groupId>
-    <artifactId>cucumber-testng</artifactId>
-    <version>1.2.4</version>
-     <scope>test</scope>
-</dependency>
-    </dependencies>
+		<!-- testng dependencies are missing from that example-->
+
 
 </project>
 	
