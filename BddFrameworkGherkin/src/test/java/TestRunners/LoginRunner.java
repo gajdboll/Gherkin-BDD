@@ -13,9 +13,10 @@ import io.cucumber.junit.CucumberOptions;
 features="C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\FeatureFiles", 
 glue= {"stepDefininitions"},tags= "@One"
 ,monochrome = true,
-plugin = { "pretty", "html:target/HTMLReport/HTMLREPORT.html",
+plugin = { "pretty", 
+"html:target/HTMLReport-NEW/HTMLREPORT.html",
 "junit:target/JunitReport/report.xml",
-"json:target/JsonReport/report.json"}
+"json:target/cucumber.json"}
  
 )
 

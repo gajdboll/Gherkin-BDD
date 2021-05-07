@@ -1,5 +1,28 @@
 # V7 Cucumber &Maven 
+*********reference*****************
 
+https://stackoverflow.com/questions/51257224/maven-cucumber-reporting-plugin-is-not-generating-the-report-nothing-happens
+
+********************
+Remember*****************
+
+***if your TestRunner File doesnt start with test word it will not be recognized by Maven
+so in this case you need to include that file in the pom as in the example below
+*** if your json file has different location thatn target/cucumber.json 
+add additional tags in the maven plugin as:
+<jsonFiles>
+ <param>**/*cucumber.json</param>
+</jsonFiles>
+
+so that allow to find your json - based on that json you get the report
+
+However I think the output and input is mention in the 2 lines above mention tags 
+<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+	<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+	
+	sec line need to match the json plugin location mention in the Runner class 
+								
+********************************************
 To do that we need 2 plugins :]
 -Maven Compiler plugin (allows to cleaan, run etc . project - we will find out all sets of all the new commands for that)
 - Maven serefire plugin - which generate 2 version of reports - used in test phase to execute unit tests of application
@@ -53,6 +76,9 @@ To do that we need 2 plugins :]
 								<projectName>GherkinBDD</projectName>
 								<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
 								<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+								<jsonFiles>
+         							 <param>**/*cucumber.json</param>
+     							</jsonFiles>
 								</configuration>
 							</execution>
 					</executions> 
@@ -80,6 +106,31 @@ Repozytorium zaś to nic innego jak zbiór plików dystrybucyjnych składającyc
 Lokalne – przykładem takiego repozytorium jest nasz komputer, na którym mamy zainstalowanego Mavena. Jeśli na takim komputerze uruchomimy teraz kod źródłowy, którego projekt będzie projektem mavenowym z komendą „install”, to u nas na komputerze zostanie utworzona paczka tego projektu oraz zainstalowana do naszego lokalnego repozytorium.
 Zdalne – są to repozytoria w Internecie, z reguły ogólnodostępne. Przykładem takiego repozytorium jest https://mvnrepository.com/. Innym przykładem może być repozytorium firmowe.
 Jest to tylko wstęp do Mavena. Jeśli chcesz dowiedzieć się więcej zapoznaj się z oficjalną dokumentacją Mavena dostępną pod adresem: http://maven.apache.org/guides/
+
+
+Make sure that you test runner file looks like that
+RunWith(Cucumber.class)
+@CucumberOptions(
+		
+features="C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\FeatureFiles", 
+glue= {"stepDefininitions"},tags= "@One"
+,monochrome = true,
+plugin = { "pretty", 
+"html:target/HTMLReport-NEW/HTMLREPORT.html",
+"junit:target/JunitReport/report.xml",
+"json:target/cucumber.json"}
+
+******     "json:target/cucumber.json"}  ***** that part is important because the maven report is searching for that Json to make that html json format
+*************************************Steps******************************
+
+
+
+First run 
+		mvn clean install in the cmd
+
+Sec step run 	
+			mvn clean verify   or mvn verify -DSkipTests
+			
 
 *****************************************************TestNG***********************************************************
 ## Test NG is included in the branch 
