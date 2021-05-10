@@ -3,15 +3,18 @@ package stepDefininitions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import BaseUtil.Base;
-
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 /* That class is always run before each test and after each test*/
 public class Hooks extends Base{
-/*
-	private Base base;
+
+/*	private Base base;
 	public Hooks( )	{}
 	//Dependency Injection
 	public Hooks(Base base)
@@ -19,7 +22,7 @@ public class Hooks extends Base{
 		this.base = base;
 	}
 	
-	@Before
+	@Before @BeforeMethod
 	public void Beginning()
 	{
 		System.out.println("1. Official web");
@@ -29,7 +32,7 @@ public class Hooks extends Base{
 	    base.Driver = new ChromeDriver();
 	}
 	
-	@After
+	@After @AfterMethod
 	public void TernDown()
 	{ 
 		base.Driver.close();
@@ -37,7 +40,7 @@ public class Hooks extends Base{
 		
 	}
 	
-	
 	*/
+	
 	
 }

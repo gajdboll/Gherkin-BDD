@@ -17,7 +17,7 @@ Feature: Testing of the Logging Application
     Examples: 
       | login      | password | Welcome                      |
       | admin222   | pass1    | Guru - test                  |
-      | mngr312054 | yjabYvA  | Guru99 Bank Manager HomePage |       
+      | mngr322726 | ratahYn  | Guru99 Bank Manager HomePage |       
 
   ## Scenario for datatable scenario
   ############################   II   ####################################

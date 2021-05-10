@@ -5,7 +5,7 @@ Feature: Testing of the Logging Application
     Given Customer is on official app web
     When Customer enters correct login credentials2
       | login      | password |
-      | mngr312054 | yjabYvA  |
+      | mngr322726 | ratahYn  |
     And Customer clicks Login button
     Then Customer is successfully Logged in to the application
     
@@ -21,4 +21,4 @@ Feature: Testing of the Logging Application
     
     Examples:
      | login      | password | email 			|
-     | mngr312054 | yjabYvA  | mngr312054	|
+     | mngr322726 | ratahYn  | mngr312054	|

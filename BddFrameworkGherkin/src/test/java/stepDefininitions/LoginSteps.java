@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import BaseUtil.Base;
@@ -46,7 +48,7 @@ public User convert(Map<String, String> entry){
           entry.get("password")
   );
 }
-	@Before
+	/*@Before @BeforeMethod
 	public void Beginning()
 	{
 		System.out.println("1. Official web");
@@ -54,11 +56,11 @@ public User convert(Map<String, String> entry){
 	 //  System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
 		 Driver = new ChromeDriver();
 	}
-	@After
+	@After @AfterMethod
 	public void TernDown()
 	{ 	Driver.close();
 		Driver.quit();		
-		System.out.println("End.");	
+		System.out.println("End.");	*/
 	}	
 	@Given("Customer is on official app web")
 	public void customer_is_on_official_app_web() {    
