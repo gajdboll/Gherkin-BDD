@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon May 10 12:33:26 BST 2021</td>
+<td>Started on:</td><td>Tue May 11 14:15:55 BST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>23 seconds (23884 ms)</td>
+<tr><td>Total time:</td><td>60 seconds (60247 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,25 +75,59 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestRunners.LoginRunner2.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
-<td><div><pre>java.lang.NullPointerException
-	at stepDefininitions.Hooks.Beginning(Hooks.java:32)
-</pre></div><a href='#' onClick='toggleBox("stack-trace285754614", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace285754614'><pre>java.lang.NullPointerException
-	at stepDefininitions.Hooks.Beginning(Hooks.java:32)
+<td title='TestRunners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru - test]
+	at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
+	at ?.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1314228008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1314228008'><pre>java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru - test]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
+	at ?.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
 </pre></div></td>
-<td>9</td>
-<td>TestRunners.LoginRunner2@4b952a2d</td></tr>
+<td>18</td>
+<td>TestRunners.LoginRunner@4bec1f0c</td></tr>
 <tr>
 <td title='TestRunners.LoginRunner2.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
-<td><div><pre>java.lang.NullPointerException
-	at stepDefininitions.Hooks.Beginning(Hooks.java:32)
-</pre></div><a href='#' onClick='toggleBox("stack-trace949314262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace949314262'><pre>java.lang.NullPointerException
-	at stepDefininitions.Hooks.Beginning(Hooks.java:32)
+<td><div><pre>java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru - test]
+	at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
+	at ?.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1055800875", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1055800875'><pre>java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru - test]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
+	at ?.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
 </pre></div></td>
-<td>11</td>
-<td>TestRunners.LoginRunner2@4b952a2d</td></tr>
+<td>10</td>
+<td>TestRunners.LoginRunner2@29ca901e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestRunners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
+<td></td>
+<td>17</td>
+<td>TestRunners.LoginRunner@4bec1f0c</td></tr>
+<tr>
+<td title='TestRunners.LoginRunner2.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
+<td></td>
+<td>12</td>
+<td>TestRunners.LoginRunner2@29ca901e</td></tr>
 </table><p>
 </body>
 </html>

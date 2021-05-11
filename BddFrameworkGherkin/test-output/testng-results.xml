@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+<testng-results skipped="0" failed="2" ignored="0" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="23884" started-at="2021-05-10T11:33:26Z" finished-at="2021-05-10T11:33:50Z">
+  <suite name="Suite" duration-ms="60247" started-at="2021-05-11T13:15:55Z" finished-at="2021-05-11T13:16:55Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner2@4b952a2d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner2@29ca901e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner@4bec1f0c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test" duration-ms="23884" started-at="2021-05-10T11:33:26Z" finished-at="2021-05-10T11:33:50Z">
+    <test name="Test" duration-ms="60247" started-at="2021-05-11T13:15:55Z" finished-at="2021-05-11T13:16:55Z">
       <class name="TestRunners.LoginRunner2">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunner2@4b952a2d]" name="setUpClass" is-config="true" duration-ms="1554" started-at="2021-05-10T11:33:26Z" finished-at="2021-05-10T11:33:28Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunner2@29ca901e]" name="setUpClass" is-config="true" duration-ms="76" started-at="2021-05-11T13:16:33Z" finished-at="2021-05-11T13:16:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner2@4b952a2d]" name="runScenario" duration-ms="9353" started-at="2021-05-10T11:33:28Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-10T11:33:37Z">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner2@29ca901e]" name="runScenario" duration-ms="10207" started-at="2021-05-11T13:16:33Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-11T13:16:43Z">
           <params>
             <param index="0">
               <value>
@@ -27,17 +28,27 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Guru99 Bank Manager HomePage] but found [Guru - test]]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at stepDefininitions.Hooks.Beginning(Hooks.java:32)
+              <![CDATA[java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru - test]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
+at ✽.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner2@4b952a2d]" name="runScenario" duration-ms="11785" started-at="2021-05-10T11:33:37Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-10T11:33:49Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner2@29ca901e]" name="runScenario" duration-ms="12184" started-at="2021-05-11T13:16:43Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-11T13:16:55Z">
           <params>
             <param index="0">
               <value>
@@ -50,21 +61,73 @@ at stepDefininitions.Hooks.Beginning(Hooks.java:32)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at stepDefininitions.Hooks.Beginning(Hooks.java:32)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunner2@4b952a2d]" name="tearDownClass" is-config="true" duration-ms="1119" started-at="2021-05-10T11:33:49Z" finished-at="2021-05-10T11:33:50Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunner2@29ca901e]" name="tearDownClass" is-config="true" duration-ms="61" started-at="2021-05-11T13:16:55Z" finished-at="2021-05-11T13:16:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- TestRunners.LoginRunner2 -->
+      <class name="TestRunners.LoginRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunner@4bec1f0c]" name="setUpClass" is-config="true" duration-ms="1517" started-at="2021-05-11T13:15:55Z" finished-at="2021-05-11T13:15:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner@4bec1f0c]" name="runScenario" duration-ms="18279" started-at="2021-05-11T13:15:57Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-11T13:16:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login to the app"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Testing of the Logging Application]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Guru99 Bank Manager HomePage] but found [Guru - test]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru - test]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
+at ✽.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner@4bec1f0c]" name="runScenario" duration-ms="17385" started-at="2021-05-11T13:16:15Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-11T13:16:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Unsuccessful login to the app"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Testing of the Logging Application]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunner@4bec1f0c]" name="tearDownClass" is-config="true" duration-ms="478" started-at="2021-05-11T13:16:32Z" finished-at="2021-05-11T13:16:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- TestRunners.LoginRunner -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

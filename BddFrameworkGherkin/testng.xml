@@ -4,6 +4,7 @@
 <suite name="Suite" verbose="1" configfailurepolicy="skip">
   <test name="Test">  
   	<classes>
+  	 		<class name ="TestRunners.LoginRunner"/>
   		<class name ="TestRunners.LoginRunner2"/>
  	 </classes>
   </test> 

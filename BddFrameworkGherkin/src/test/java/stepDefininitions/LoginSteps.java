@@ -48,7 +48,7 @@ public User convert(Map<String, String> entry){
           entry.get("password")
   );
 }
-	/*@Before @BeforeMethod
+	@Before @BeforeMethod
 	public void Beginning()
 	{
 		System.out.println("1. Official web");
@@ -60,7 +60,7 @@ public User convert(Map<String, String> entry){
 	public void TernDown()
 	{ 	Driver.close();
 		Driver.quit();		
-		System.out.println("End.");	*/
+		System.out.println("End.");	
 	}	
 	@Given("Customer is on official app web")
 	public void customer_is_on_official_app_web() {    
