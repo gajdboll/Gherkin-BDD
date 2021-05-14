@@ -31,8 +31,21 @@ Feature: Testing of the Logging Application
 
   ###############################   III   #################################
   @Three
-  Scenario: Successful login to the app
-    #"amidn" & "password" is passed as argument in the method
-    When Customer enters correct login as "admin" and enters correct password "pass123"
-    And Customer clicks Login button
-    Then Customer is successfully Logged in to the application
+  @ExTestWithTable
+  Scenario Outline: Check login is succesful with valid credential
+   
+   
+    When user enters "<sheetName>" and <RowNumber> 
+    And user click on login button and fill out the form
+    Then user is navigate to home page`
+
+    Examples: 
+      | sheetName | RowNumber |condition|
+      | Login     |         0 |Login|
+      | Login     |         1 |Login|
+      | Login     |         2 |Login|
+      | Login     |         3 |Login|
+
+    
+    
+    
