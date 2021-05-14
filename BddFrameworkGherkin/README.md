@@ -1,39 +1,29 @@
-# V8 - > Extend report - another way of reporting
+# V8 - > Adding Excel to the test - Data Driven testing
 
-***************************************************************
-Step 1: Add Cucumber Extent Reporter library to Maven Project
-*********************************************************
-This is really simple, as we have been using Maven Project,
- all we need to do is to add the dependencies in to the project POM file. 
-Dependencies information can be taken from Maven Repository – Cucumber Extent Reporter.
+****************Ithems needed***********************************************
+1)Dependecies needed - POI library
 
-
-<dependency>
- <groupId>com.aventstack</groupId>
- <artifactId>extentreports</artifactId>
- <version>3.1.2</version>
-</dependency> 
-*****************************************
-Step 2 – Add Extent Config to the Project
-********************************************
-Extent Config is required by the Cucumber Extent Report plugin to read the report configuration. As it gives the capability to set many useful settings to the report from the XML configuration file.
-
-1. Create a New File and name it as extent-config.xml by right click on the configs folder in the project. In this config file you can set many elements like :
-
-Report Theme : <theme> : standard or dark
-Document Encoding : <encoding> : UFT-8
-Title of the Report : <documentTitle> : This will display on the Browser Tab
-Name of the Report: <reportName>: This will display at the top of the Report
-Global Date Format : <dateFormat> : Like this yyyy-MM-dd
-Global Time Format  : <timeFormat> : Like this HH:mm:ss
-
-**************************************
-Step 3: Read the extent-config.xml path
-****************************************
-1. Make an entry for the Path of the config in the Configuration.properties file.
-
-reportConfigPath=C:/ToolsQA/CucumberFramework/configs/extent-config.xml
-
-Note: Make sure to edit the path as per your machine path.
-
+<!-- POI-->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+	
+		<dependency>
+		    <groupId>com.itextpdf</groupId>
+		    <artifactId>itextpdf</artifactId>
+		    <version>5.5.13</version>
+		</dependency>
+----------------
+2) ExcelReader class (I will add 2 classes just in case - one was previously used in Baldoyle but I will use the one from QAtools web)
+ they are attached in the Utils package
  
+3) modification of the featuer file - adding additional tests which will pull informations from excel
+ 
+4) addidng excel to teh project

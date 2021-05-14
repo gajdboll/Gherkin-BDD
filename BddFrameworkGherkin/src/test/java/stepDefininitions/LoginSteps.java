@@ -8,10 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import BaseUtil.Base;
 import Pages.LoginPages;
@@ -31,6 +31,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginSteps extends Base{
 
+	//project structure saved into the vaRIABLE
+	String path = System.getProperty("user.dir");
+	 
+	
+	
 	private Base base;
 	//private WebDriver Driver;
 	public LoginSteps( ) {}
@@ -48,20 +53,35 @@ public User convert(Map<String, String> entry){
           entry.get("password")
   );
 }
-	@Before @BeforeMethod
+	@Before
 	public void Beginning()
 	{
 		System.out.println("1. Official web");
-	    WebDriverManager.chromedriver().setup();
+	    //WebDriverManager.chromedriver().setup();
+		//System.setProperty("webdriver.chrome.driver",path+chromeDriverPath);
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\Drivers\\ChromeDriver\\chromedriver.exe");
+		//WebDriverManager.firefoxdriver().setup();
+	  //  WebDriverManager.edgedriver().setup();
+	  //  WebDriverManager.iedriver().setup();
 	 //  System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
-		 Driver = new ChromeDriver();
+		 
 	}
-	@After @AfterMethod
+	@After
 	public void TernDown()
 	{ 	Driver.close();
-		Driver.quit();		
+		Driver.quit();	
+		Driver=null;
 		System.out.println("End.");	
-	}	
+	}
+	@Given("Customer is on official app web on Firefox")
+	public void customer_is_on_official_app_web_on_firefox() {
+		//base.Driver.get("http://demo.guru99.com/V4/");
+		Driver = new ChromeDriver();
+				Driver.navigate().to("http://demo.guru99.com/V4/");
+			    String url = Driver.getCurrentUrl();
+			    System.out.println("Customer enters page "+url); 
+	}
+
 	@Given("Customer is on official app web")
 	public void customer_is_on_official_app_web() {    
 		//base.Driver.get("http://demo.guru99.com/V4/");
@@ -81,7 +101,6 @@ public User convert(Map<String, String> entry){
 		LoginPages page = new LoginPages(Driver);
 		page.ClickLogin();
 	}
-	
 	@Then("Customer is successfully Logged in to the application")
 	public void customer_is_successfully_logged_in_to_the_application() {
 		System.out.println("4. Successfully Logged In - Assertion");
@@ -121,6 +140,35 @@ public User convert(Map<String, String> entry){
 		page.EnterLoginCredentials(cells.get(1).get(0), cells.get(1).get(1));
 		
 	}
+	  @Given("Customer is on official app web on firefox")
+      public void customer_enters_correct_admin222_and_pass1_on_firefox() 
+      {
+         System.out.println("Firefox Browser");
+         Driver = new FirefoxDriver();
+			Driver.navigate().to("http://demo.guru99.com/V4/");
+		    String url = Driver.getCurrentUrl();
+		    System.out.println("Customer enters page "+url); 
+  }
+	  @Given("Customer is on official app web on Edge")
+      public void customer_enters_correct_admin222_and_pass1_on_Edge() 
+      {
+         System.out.println("Edge Browser");
+         Driver = new EdgeDriver();
+			Driver.navigate().to("http://demo.guru99.com/V4/");
+		    String url = Driver.getCurrentUrl();
+		    System.out.println("Customer enters page "+url); 
+  }
+	  
+	  @Given("Customer is on official app web on IE")
+      public void customer_enters_correct_admin222_and_pass1_on_IE() 
+      {
+         System.out.println("IE Browser");
+         Driver = new InternetExplorerDriver();
+			Driver.navigate().to("http://demo.guru99.com/V4/");
+		    String url = Driver.getCurrentUrl();
+		    System.out.println("Customer enters page "+url); 
+      }
+	//new methods for Tranformation scenario
 	@When("Customer enters correct login credentials2")
 	public void customer_enters_correct_login_credentials2(io.cucumber.datatable.DataTable table) {
 		 //method raw no longer exist so we are using method cell to get access to cels
@@ -129,6 +177,8 @@ public User convert(Map<String, String> entry){
         // quick way to hide selected code / text - > ctrl + Shift + "/"
         WebElement loginField = Driver.findElement(By.name("uid"));
         WebElement passField = Driver.findElement(By.name("password"));
+ 
+       ///////////////////////////////////////////
         //sec posibility is : create an array list of users which stores all users
         List<User> users = new ArrayList<User>();
         users = table.asList(User.class);
@@ -146,53 +196,10 @@ public User convert(Map<String, String> entry){
         public String login;
         public String password;
 
-        public User(String login, String password) {
+        public User(String login, String password) 
+        {
             this.login = login;
             this.password = password;
         }
-    }
-	//new methods for Tranformation scenario
-	
-	
-	@When("^Customer enters correct login & (\\w+)$")
-	public void customer_enters_correct_credentials(@Transform (CorrectCredentials.class) String password) {
-		 System.out.println("1.0 - Password is: " + password);
-	}
-
-	@When("Customers login is the prefix for {string} domain")
-	public void customers_login_is_the_prefix_for_email_domain(@Transform (EmailTransform.class)String email) {
-	    System.out.println("2.0 - Result is: "+ email );
-	}
-
-	@When("^Numbers of characters in the correct (\\w+) length$")
-	public void numbers_of_characters_in_the_correct_password_length(@Transform(PassLength.class)String password) {
-		System.out.println("3.0 - Result is: "+ password);
-	}
-	
-	
-@Given("I want to write a step with precondition <name>")
-public void i_want_to_write_a_step_with_precondition_name() {
-	System.out.println("Then1");
-}
-
-@When("I check for the <value> in step")
-public void i_check_for_the_value_in_step() {
-	System.out.println("Then2");
-}
-
-@Then("I validate the outcomes")
-public void i_validate_the_outcomes() {
-	System.out.println("Then3");
-}
-
-@Then("I verify the success in step")
-public void i_verify_the_success_in_step() {
-	System.out.println("Then4");
-}
-
-@Then("I verify the Fail in step")
-public void i_verify_the_fail_in_step() {
-	System.out.println("Then8");
-}
-
+       }
 }
