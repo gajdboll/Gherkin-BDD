@@ -57,13 +57,9 @@ public User convert(Map<String, String> entry){
 	public void Beginning()
 	{
 		System.out.println("1. Official web");
-	    //WebDriverManager.chromedriver().setup();
-		//System.setProperty("webdriver.chrome.driver",path+chromeDriverPath);
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\Drivers\\ChromeDriver\\chromedriver.exe");
-		//WebDriverManager.firefoxdriver().setup();
-	  //  WebDriverManager.edgedriver().setup();
-	  //  WebDriverManager.iedriver().setup();
-	 //  System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
+	    WebDriverManager.chromedriver().setup();
+	    WebDriverManager.edgedriver().setup();
+	 
 		 
 	}
 	@After
@@ -73,17 +69,10 @@ public User convert(Map<String, String> entry){
 		Driver=null;
 		System.out.println("End.");	
 	}
-	@Given("Customer is on official app web on Firefox")
-	public void customer_is_on_official_app_web_on_firefox() {
-		//base.Driver.get("http://demo.guru99.com/V4/");
-		Driver = new ChromeDriver();
-				Driver.navigate().to("http://demo.guru99.com/V4/");
-			    String url = Driver.getCurrentUrl();
-			    System.out.println("Customer enters page "+url); 
-	}
-
+  
 	@Given("Customer is on official app web")
 	public void customer_is_on_official_app_web() {    
+		Driver = new ChromeDriver();
 		//base.Driver.get("http://demo.guru99.com/V4/");
 		Driver.navigate().to("http://demo.guru99.com/V4/");
 	    String url = Driver.getCurrentUrl();

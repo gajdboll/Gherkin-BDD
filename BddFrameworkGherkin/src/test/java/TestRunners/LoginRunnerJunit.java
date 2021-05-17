@@ -19,6 +19,6 @@ plugin = { "pretty", "html:target/HTMLReport/HTMLREPORT.html",
  
 )
 
-public class LoginRunner  {//extends AbstractTestNGCucumberTests{
+public class LoginRunnerJunit  {//extends AbstractTestNGCucumberTests{
 
 }

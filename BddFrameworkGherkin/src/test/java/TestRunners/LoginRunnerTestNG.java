@@ -1,5 +1,7 @@
 package TestRunners;
 
+import org.testng.annotations.DataProvider;
+
 //import org.junit.runner.RunWith;
 
 //import io.cucumber.junit.Cucumber;
@@ -11,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		
 features="C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\FeatureFiles", 
-glue= {"stepDefininitions"},tags= "@One"
+glue= {"stepDefininitions"},tags= "@Parallel"
 ,monochrome = true,
 plugin = { "pretty", "html:target/HTMLReport/HTMLREPORT.html",
 "junit:target/JunitReport/report.xml",
@@ -20,6 +22,10 @@ plugin = { "pretty", "html:target/HTMLReport/HTMLREPORT.html",
  
 )
 
-public class LoginRunner2 extends AbstractTestNGCucumberTests{
-
+public class LoginRunnerTestNG extends AbstractTestNGCucumberTests{
+	 @Override
+	    @DataProvider(parallel = true)
+	    public Object[][] scenarios() {
+	        return super.scenarios();
+	    }
 }

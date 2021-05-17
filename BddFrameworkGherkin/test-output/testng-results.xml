@@ -2,20 +2,19 @@
 <testng-results skipped="0" failed="2" ignored="0" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="60247" started-at="2021-05-11T13:15:55Z" finished-at="2021-05-11T13:16:55Z">
+  <suite name="Default suite" duration-ms="59259" started-at="2021-05-17T13:33:19Z" finished-at="2021-05-17T13:34:18Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner2@29ca901e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner@4bec1f0c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@73846619]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test" duration-ms="60247" started-at="2021-05-11T13:15:55Z" finished-at="2021-05-11T13:16:55Z">
-      <class name="TestRunners.LoginRunner2">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunner2@29ca901e]" name="setUpClass" is-config="true" duration-ms="76" started-at="2021-05-11T13:16:33Z" finished-at="2021-05-11T13:16:33Z">
+    <test name="Default test" duration-ms="59259" started-at="2021-05-17T13:33:19Z" finished-at="2021-05-17T13:34:18Z">
+      <class name="TestRunners.LoginRunnerTestNG">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@73846619]" name="setUpClass" is-config="true" duration-ms="1457" started-at="2021-05-17T13:33:19Z" finished-at="2021-05-17T13:33:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner2@29ca901e]" name="runScenario" duration-ms="10207" started-at="2021-05-11T13:16:33Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-11T13:16:43Z">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@73846619]" name="runScenario" duration-ms="57268" started-at="2021-05-17T13:33:20Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-17T13:34:18Z">
           <params>
             <param index="0">
               <value>
@@ -40,15 +39,15 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
-at ✽.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
+at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:118)
+at ✽.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginChrome.feature:15)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner2@29ca901e]" name="runScenario" duration-ms="12184" started-at="2021-05-11T13:16:43Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-11T13:16:55Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@73846619]" name="runScenario" duration-ms="56259" started-at="2021-05-17T13:33:20Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-17T13:34:17Z">
           <params>
             <param index="0">
               <value>
@@ -64,17 +63,7 @@ at ✽.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunner2@29ca901e]" name="tearDownClass" is-config="true" duration-ms="61" started-at="2021-05-11T13:16:55Z" finished-at="2021-05-11T13:16:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- TestRunners.LoginRunner2 -->
-      <class name="TestRunners.LoginRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunner@4bec1f0c]" name="setUpClass" is-config="true" duration-ms="1517" started-at="2021-05-11T13:15:55Z" finished-at="2021-05-11T13:15:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner@4bec1f0c]" name="runScenario" duration-ms="18279" started-at="2021-05-11T13:15:57Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-11T13:16:15Z">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@73846619]" name="runScenario" duration-ms="56513" started-at="2021-05-17T13:33:20Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-17T13:34:17Z">
           <params>
             <param index="0">
               <value>
@@ -99,15 +88,15 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
-at ✽.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
+at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:118)
+at ✽.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginEdge.feature:15)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunner@4bec1f0c]" name="runScenario" duration-ms="17385" started-at="2021-05-11T13:16:15Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-11T13:16:32Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@73846619]" name="runScenario" duration-ms="55636" started-at="2021-05-17T13:33:20Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-17T13:34:16Z">
           <params>
             <param index="0">
               <value>
@@ -123,11 +112,11 @@ at ✽.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunner@4bec1f0c]" name="tearDownClass" is-config="true" duration-ms="478" started-at="2021-05-11T13:16:32Z" finished-at="2021-05-11T13:16:33Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@73846619]" name="tearDownClass" is-config="true" duration-ms="410" started-at="2021-05-17T13:34:18Z" finished-at="2021-05-17T13:34:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- TestRunners.LoginRunner -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- TestRunners.LoginRunnerTestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
