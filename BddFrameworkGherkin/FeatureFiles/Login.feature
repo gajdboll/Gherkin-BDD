@@ -7,7 +7,7 @@ Feature: Testing of the Logging Application
     Given Customer is on official app web
 
   ############################   I   ################################
-  @One
+  @One @Parallel
   Scenario Outline: Unsuccessful login to the app
     #"amidn" & "password" is passed as argument in the method
     When Customer enters correct <login> and <password> 
@@ -17,7 +17,7 @@ Feature: Testing of the Logging Application
     Examples: 
       | login      | password | Welcome                      |
       | admin222   | pass1    | Guru - test                  |
-      | mngr312054 | yjabYvA  | Guru99 Bank Manager HomePage |       
+      | mngr322726 | ratahYn  | Guru99 Bank Manager HomePage |       
 
   ## Scenario for datatable scenario
   ############################   II   ####################################
@@ -31,8 +31,16 @@ Feature: Testing of the Logging Application
 
   ###############################   III   #################################
   @Three
-  Scenario: Successful login to the app
-    #"amidn" & "password" is passed as argument in the method
-    When Customer enters correct login as "admin" and enters correct password "pass123"
-    And Customer clicks Login button
-    Then Customer is successfully Logged in to the application
+  @ExTestWithTable
+  Scenario Outline: Check login is succesful with valid credential
+   
+     When user enters "<sheetName>" and <RowNumber> 
+     And Customer clicks Login button
+    Then Customer is re-directed to web with <Welcome>
+
+    Examples: 
+      | sheetName | RowNumber |Welcome |
+      | Login     |         0 |Guru99 Bank Manager HomePage |  
+      | Login     |         1 |Guru99 Bank Manager HomePage |  
+     # | Login     |         2 |Guru99 Bank Manager HomePage |  
+     # | Login     |         3 |Guru99 Bank Manager HomePage |  

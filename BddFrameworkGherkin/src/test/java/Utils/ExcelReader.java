@@ -1,32 +1,7 @@
-# V8 Adding Excel reader
-
-1) If you want to read the data from ewxcel and paas it to your test casaes you need to add special deppendencies - which are part of POI dependenceis 
-list below:   - -- - -  additionaly I have aaded  extra class in case I need it in the future (Utils package)
-
-2) you need to update you feature file as below
-
-
-###############################   III   #################################
-  @Three
-  @ExTestWithTable
-  Scenario Outline: Check login is succesful with valid credential
-   
-     When user enters "<sheetName>" and <RowNumber> 
-     And Customer clicks Login button
-    Then Customer is re-directed to web with <Welcome>
-
-    Examples: 
-      | sheetName | RowNumber |Welcome |
-      | Login     |         0 |Guru99 Bank Manager HomePage |  
-      | Login     |         1 |Guru99 Bank Manager HomePage |  
-      | Login     |         2 |Guru99 Bank Manager HomePage |  
-      | Login     |         3 |Guru99 Bank Manager HomePage |  
-     
-3) add additional methods
-
-4) and the most important - create package Utils and add Excel Reader File - that allows you go through the excel and read it - fetch the data
-
 package Utils;
+
+ 
+
 
 	import java.io.File;
 	import java.io.IOException;
@@ -181,10 +156,3 @@ public class ExcelReader {
 	}
 
  
-
-
-
-
-
-Job done!!!!!!!!!!!!!!
-
