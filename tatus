@@ -1,0 +1,197 @@
+[33mcommit e718634138cc9869102e6badf2da53084e5e85d6[m[33m ([m[1;36mHEAD -> [m[1;32mv9[m[33m)[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Mon May 17 14:35:12 2021 +0100
+
+    first step completed
+
+[33mcommit 4f36a720adcde4513e0edf507f5f49ef8803d4ae[m[33m ([m[1;32mv8[m[33m)[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Fri May 14 10:47:38 2021 +0100
+
+    feature added
+
+[33mcommit 7a446c71bcbcec5049c3d93219a523002a44c305[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Fri May 14 10:26:30 2021 +0100
+
+    excel added
+
+[33mcommit a8977ccd0657406f50c08cb1b22cc14468833cc0[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Tue May 11 14:34:53 2021 +0100
+
+    test
+
+[33mcommit f822fd67755827db2a6f8f8a9de2aa0384a7935a[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Mon May 10 13:22:30 2021 +0100
+
+    teset
+
+[33mcommit 6db915c3b352f3778cecb5f8e4ad6925ed5ef9b5[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Thu May 6 15:21:54 2021 +0100
+
+    changes
+
+[33mcommit b29e0f7b181e057195c34879d877a005b2830d85[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Thu Apr 29 14:04:44 2021 +0100
+
+    test
+
+[33mcommit 66536ae40230540c2cb10a8f07c6a54e73cf855b[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Tue Apr 27 16:41:38 2021 +0100
+
+    zmiany w plikach do raportowania
+
+[33mcommit 9910c20333039fd875c71b489fde1d3b88f6025c[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Tue Apr 27 14:38:15 2021 +0100
+
+    mvn test
+
+[33mcommit 6bc817323545fe273dd150d50dac637f03f4d595[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Tue Apr 27 13:51:51 2021 +0100
+
+    test
+
+[33mcommit 60e392cc96bed169d68d1f0da812044ce8ec639a[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Mon Apr 26 14:52:33 2021 +0100
+
+    dodanie chromedrivera
+
+[33mcommit abe95b66900870e75f2c5a791a2f4f481e69a449[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Thu Apr 22 08:40:47 2021 +0100
+
+    latest changes
+
+[33mcommit 3ebd0c7311e1e17bd60f69d095d7f6cd9384fc8d[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Tue Mar 30 14:57:14 2021 +0100
+
+    patch for the latest version
+
+[33mcommit 3ea936e264629720c53e51a342c9d408ec62f9c9[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Tue Mar 30 14:46:14 2021 +0100
+
+    reporting completed
+
+[33mcommit 5830db74aaecb6b24031e19a80bdd29c5db50add[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Tue Mar 30 12:57:37 2021 +0100
+
+    final attachement
+
+[33mcommit a59d8114804ac48476b79bf88b97f9419d47a164[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Thu Mar 25 14:26:42 2021 +0000
+
+    all wrong
+
+[33mcommit e87b4ad354730055b4754b07880c405c2f65f286[m[33m ([m[1;31morigin/v6[m[33m)[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Thu Mar 25 13:18:12 2021 +0000
+
+    last addition to that branch
+
+[33mcommit eb7a897bd9343fdab28bc6bcfb7e8e958d992cf4[m[33m ([m[1;31morigin/v5[m[33m)[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Wed Mar 24 18:13:14 2021 +0000
+
+    Final deploymen to POM
+
+[33mcommit dbea57ccfc304cfc44adf5ce3d4e617bea564b38[m[33m ([m[1;31morigin/v4[m[33m)[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Wed Mar 24 17:17:42 2021 +0000
+
+    final changes - patch
+
+[33mcommit 330819fcb856ef9bff1bd77177c39d4d84d02548[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Wed Mar 24 16:03:21 2021 +0000
+
+    Final deploymrnt to v4 branch
+
+[33mcommit 1ba0d9bd3e8ba0755d79c3599641daefb4cb8f81[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Tue Mar 23 13:08:18 2021 +0000
+
+    test Tania
+
+[33mcommit 77816c7c2ee874d11bec5a01e299b3f03470e546[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Tue Mar 23 12:16:53 2021 +0000
+
+    test
+
+[33mcommit 3855393afe4f98d207225687ce57050cd46a379c[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Tue Mar 23 11:54:50 2021 +0000
+
+    test
+
+[33mcommit f6ee074f515ced0f6f957c8becf3cf87fa599ab0[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Tue Mar 23 11:46:48 2021 +0000
+
+    First state of the Dependency Injection
+
+[33mcommit d670b7af3191109c27dd96a8bc51598a6c5f2e7d[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Mon Mar 22 16:33:02 2021 +0000
+
+    test2
+
+[33mcommit 8c51dc70e087b7b006a41fe44a84c3ba7c300a3d[m[33m ([m[1;31morigin/v2[m[33m)[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Fri Mar 19 17:15:49 2021 +0000
+
+    Final changes to the script and readme file
+
+[33mcommit 415bbff146ba3836884698a2beaa5c0da2e9cc06[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Fri Mar 19 16:01:30 2021 +0000
+
+     test deployment
+
+[33mcommit 18aba1d462ed9c21ca2e70d4564a0ae07c693554[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Thu Mar 18 17:52:05 2021 +0000
+
+    initial faze for data tables
+
+[33mcommit 680c01c53775a6e521d3abb59af2ddaa88ad4c40[m[33m ([m[1;31morigin/v1[m[33m)[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Thu Mar 18 15:30:04 2021 +0000
+
+    final changes deployed to v1 branch
+
+[33mcommit f72e9d7662252ba0f41d42ea2eca554b56a75280[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Thu Mar 18 15:08:32 2021 +0000
+
+    final deployment to the v1 branch
+
+[33mcommit 449e9738da18ebda2cdaba3c1e2ddfab5a2542aa[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Thu Mar 18 14:49:30 2021 +0000
+
+    additional inputs for readme file
+
+[33mcommit 32221b6e7c16d468f21682273d4465503f51dc55[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Thu Mar 18 14:28:45 2021 +0000
+
+    Initial faze completed and first test passes
+
+[33mcommit 50f1c73fb370f2aa2531c63d357ae481c81270c7[m
+Author: Krzysztof Gajdosz <confesor123@gmail.com>
+Date:   Thu Mar 18 14:08:19 2021 +0000
+
+    Initial BDD project
