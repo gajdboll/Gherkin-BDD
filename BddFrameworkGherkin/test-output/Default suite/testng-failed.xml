@@ -5,11 +5,7 @@
     <classes>
       <class name="TestRunners.LoginRunnerTestNG">
         <methods>
-<<<<<<< HEAD
           <include name="runScenario" invocation-numbers="0"/>
-=======
-          <include name="runScenario" invocation-numbers="1"/>
->>>>>>> parent of bd310a6... final check - works fine
           <include name="tearDownClass"/>
           <include name="setUpClass"/>
         </methods>

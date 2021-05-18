@@ -2,33 +2,19 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="29486" started-at="2021-05-18T07:22:04Z" finished-at="2021-05-18T07:22:34Z">
-=======
-  <suite name="Default suite" duration-ms="26094" started-at="2021-05-18T06:55:11Z" finished-at="2021-05-18T06:55:37Z">
->>>>>>> parent of bd310a6... final check - works fine
+  <suite name="Default suite" duration-ms="25884" started-at="2021-05-18T14:50:14Z" finished-at="2021-05-18T14:50:40Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-<<<<<<< HEAD
-    <test name="Default test" duration-ms="29486" started-at="2021-05-18T07:22:04Z" finished-at="2021-05-18T07:22:34Z">
+    <test name="Default test" duration-ms="25884" started-at="2021-05-18T14:50:14Z" finished-at="2021-05-18T14:50:40Z">
       <class name="TestRunners.LoginRunnerTestNG">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="setUpClass" is-config="true" duration-ms="1783" started-at="2021-05-18T07:22:04Z" finished-at="2021-05-18T07:22:06Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="setUpClass" is-config="true" duration-ms="1330" started-at="2021-05-18T14:50:14Z" finished-at="2021-05-18T14:50:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" duration-ms="25532" started-at="2021-05-18T07:22:06Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T07:22:32Z">
-=======
-    <test name="Default test" duration-ms="26094" started-at="2021-05-18T06:55:11Z" finished-at="2021-05-18T06:55:37Z">
-      <class name="TestRunners.LoginRunnerTestNG">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="setUpClass" is-config="true" duration-ms="1127" started-at="2021-05-18T06:55:11Z" finished-at="2021-05-18T06:55:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" duration-ms="13018" started-at="2021-05-18T06:55:12Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T06:55:25Z">
->>>>>>> parent of bd310a6... final check - works fine
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="runScenario" duration-ms="14958" started-at="2021-05-18T14:50:15Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T14:50:30Z">
           <params>
             <param index="0">
               <value>
@@ -41,40 +27,15 @@
               </value>
             </param>
           </params>
-<<<<<<< HEAD
           <exception class="org.openqa.selenium.NoSuchWindowException">
-=======
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" duration-ms="11389" started-at="2021-05-18T06:55:25Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T06:55:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Check login is succesful with valid credential"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Testing of the Logging Application]"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.UnhandledAlertException">
->>>>>>> parent of bd310a6... final check - works fine
             <message>
               <![CDATA[no such window
   (Session info: chrome=89.0.4389.114)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LIE-CZ9NTC2', ip: '10.37.248.98', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-<<<<<<< HEAD
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64453}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: eb7d03b9f4e8c6ab01c0e02f4f3aaa0c]]>
-=======
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62323}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4130ea130e7dcd772d5b25ec4ed56053]]>
->>>>>>> parent of bd310a6... final check - works fine
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a8c883d7179cdb1657f4f64edf607897]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window
@@ -82,42 +43,28 @@ Session ID: 4130ea130e7dcd772d5b25ec4ed56053]]>
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LIE-CZ9NTC2', ip: '10.37.248.98', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-<<<<<<< HEAD
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64453}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: eb7d03b9f4e8c6ab01c0e02f4f3aaa0c
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a8c883d7179cdb1657f4f64edf607897
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 at java.lang.reflect.Constructor.newInstance(Unknown Source)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-=======
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62323}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4130ea130e7dcd772d5b25ec4ed56053
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
->>>>>>> parent of bd310a6... final check - works fine
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-<<<<<<< HEAD
 at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
 at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:119)
 at ✽.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginChrome.feature:15)
-=======
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:287)
-at stepDefininitions.LoginSteps.customer_is_successfully_logged_in_to_the_application(LoginSteps.java:100)
-at ✽.Customer is successfully Logged in to the application(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginChrome.feature:40)
->>>>>>> parent of bd310a6... final check - works fine
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" duration-ms="26849" started-at="2021-05-18T07:22:06Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T07:22:33Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="runScenario" duration-ms="9011" started-at="2021-05-18T14:50:30Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T14:50:39Z">
           <params>
             <param index="0">
               <value>
@@ -133,10 +80,7 @@ at ✽.Customer is successfully Logged in to the application(file:///C:/Users/kg
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="tearDownClass" is-config="true" duration-ms="763" started-at="2021-05-18T07:22:33Z" finished-at="2021-05-18T07:22:34Z">
-=======
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="tearDownClass" is-config="true" duration-ms="503" started-at="2021-05-18T06:55:36Z" finished-at="2021-05-18T06:55:37Z">
->>>>>>> parent of bd310a6... final check - works fine
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="tearDownClass" is-config="true" duration-ms="515" started-at="2021-05-18T14:50:39Z" finished-at="2021-05-18T14:50:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

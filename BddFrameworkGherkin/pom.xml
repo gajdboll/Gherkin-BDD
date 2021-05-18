@@ -37,7 +37,7 @@
   		  <version>2.22.0</version>
 		  <configuration>
 		    <includes>
-                    <include>**/*LoginRunner.java</include>
+                    <include>**/*LoginRunnerTestNG.java</include>
             </includes>
 			<testFailureIgnore>true</testFailureIgnore>
 			
@@ -171,7 +171,29 @@
 		    <artifactId>itextpdf</artifactId>
 		    <version>5.5.13</version>
 		</dependency>
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports         V10   -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.8</version>
+</dependency>
 
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports-cucumber4-adapter</artifactId>
+    <version>1.2.1</version>
+</dependency>
+  <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.14.1</version>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.14.1</version>
+  </dependency>
     </dependencies>
 
 </project>
