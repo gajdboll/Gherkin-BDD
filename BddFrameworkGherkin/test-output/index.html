@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\kgajdosz\AppData\Local\Temp\testng-eclipse--600420635\testng-customsuite.xml</span>
+                    <span>C:\Users\kgajdosz\AppData\Local\Temp\testng-eclipse--344406086\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,12 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="TestRunners.LoginRunnerTestNG" hash-for-method="runScenario(&quot;Check login is succesful with valid credential&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="TestRunners.LoginRunnerTestNG" hash-for-method="runScenario(&quot;Check login is succesful with valid credential&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="TestRunners.LoginRunnerTestNG" hash-for-method="runScenario(&quot;Unsuccessful login to the app&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">runScenario("Unsuccessful login to the app", "Optional[Testing of the Logging Application]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,12 +116,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="TestRunners.LoginRunnerTestNG" hash-for-method="runScenario(&quot;Check login is succesful with valid credential&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="TestRunners.LoginRunnerTestNG" hash-for-method="runScenario(&quot;Check login is succesful with valid credential&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="TestRunners.LoginRunnerTestNG" hash-for-method="runScenario(&quot;Unsuccessful login to the app&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">runScenario("Unsuccessful login to the app", "Optional[Testing of the Logging Application]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -149,52 +139,30 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Check login is succesful with valid credential&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">
-                  </a> <!-- runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]") -->
+                  <a name="runScenario(&quot;Unsuccessful login to the app&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">
+                  </a> <!-- runScenario("Unsuccessful login to the app", "Optional[Testing of the Logging Application]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</span>
-                  <div class="stack-trace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : User or Password is not valid}
-  (Session info: MicrosoftEdge=90.0.818.62): User or Password is not valid
+                  <span class="parameters">("Unsuccessful login to the app", "Optional[Testing of the Logging Application]")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window
+  (Session info: chrome=89.0.4389.114)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 90.0.818.62, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:62443}, msedge: {msedgedriverVersion: 90.0.818.62 (0fca3b62331f6f..., userDataDir: C:\Users\kgajdosz\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 06cee1e6f6c7eb6e4fde6a639cefc52a
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-	at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:70)
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Check login is succesful with valid credential&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">
-                  </a> <!-- runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</span>
-                  <div class="stack-trace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : User or Password is not valid}
-  (Session info: chrome=89.0.4389.114): User or Password is not valid
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.248.98&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0bc59fc394d21ea75ec0d90e9a492190
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64453}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: eb7d03b9f4e8c6ab01c0e02f4f3aaa0c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-	at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:70)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
+	at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:119)
+	at ✽.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginChrome.feature:15)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -211,20 +179,10 @@ Session ID: 0bc59fc394d21ea75ec0d90e9a492190
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Check login is succesful with valid credential&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">
-                  </a> <!-- runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]") -->
+                  <a name="runScenario(&quot;Unsuccessful login to the app&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">
+                  </a> <!-- runScenario("Unsuccessful login to the app", "Optional[Testing of the Logging Application]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Check login is succesful with valid credential&quot;, &quot;Optional[Testing of the Logging Application]&quot;)">
-                  </a> <!-- runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</span>
+                  <span class="parameters">("Unsuccessful login to the app", "Optional[Testing of the Logging Application]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -234,7 +192,7 @@ Session ID: 0bc59fc394d21ea75ec0d90e9a492190
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\kgajdosz\AppData\Local\Temp\testng-eclipse--600420635\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\kgajdosz\AppData\Local\Temp\testng-eclipse--344406086\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -291,28 +249,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'TestRunners.LoginRunnerTestNG')
-data.setCell(0, 3, 58522);
+data.setCell(0, 3, 26849);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'TestRunners.LoginRunnerTestNG')
-data.setCell(1, 3, 58469);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'runScenario')
-data.setCell(2, 2, 'TestRunners.LoginRunnerTestNG')
-data.setCell(2, 3, 42698);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'runScenario')
-data.setCell(3, 2, 'TestRunners.LoginRunnerTestNG')
-data.setCell(3, 3, 39708);
+data.setCell(1, 3, 25532);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 52 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -344,28 +294,18 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</span>
-                <span class="method-start">1476 ms</span>
+                <span class="method-name">runScenario("Unsuccessful login to the app", "Optional[Testing of the Logging Application]")</span>
+                <span class="method-start">1828 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</span>
-                <span class="method-start">1477 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</span>
-                <span class="method-start">1479 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("Check login is succesful with valid credential", "Optional[Testing of the Logging Application]")</span>
-                <span class="method-start">1483 ms</span>
+                <span class="method-name">runScenario("Unsuccessful login to the app", "Optional[Testing of the Logging Application]")</span>
+                <span class="method-start">1828 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">60002 ms</span>
+                <span class="method-start">28679 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

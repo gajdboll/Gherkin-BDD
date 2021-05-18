@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		
 features="C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\FeatureFiles", 
-glue= {"stepDefininitions"},tags= "@ExTestWithTable"
+glue= {"stepDefininitions"},tags= "@One"
 ,monochrome = true,
 plugin = { "pretty", "html:target/HTMLReport/HTMLREPORT.html",
 "junit:target/JunitReport/report.xml",

@@ -116,7 +116,7 @@ public User convert(Map<String, String> entry){
 		System.out.println("6. Moved to Web - with text - Assertion");
 		String expectedTab= "Guru99 Bank Manager HomePage";
 		//below there is error handler - driver
-		if(Welcome.equalsIgnoreCase(expectedTab)) { System.out.println("Success");} else {	Driver.switchTo().alert().accept();	System.out.println("Failure - try it next time");
+		if(Welcome.equalsIgnoreCase(expectedTab)) { System.out.println("Success");} else {	Driver.switchTo().alert().accept(); Driver.switchTo().window(Welcome);	System.out.println("Failure - try it next time");
 			}
 		Assert.assertEquals(Welcome,expectedTab);	
 	}
