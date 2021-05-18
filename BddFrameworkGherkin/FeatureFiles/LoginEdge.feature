@@ -32,7 +32,7 @@ Feature: Testing of the Logging Application
 
   ###############################   III   #################################
   @Three
-  @ExTestWithTable
+  @ExTestWithTable1
   Scenario Outline: Check login is succesful with valid credential
    
     When user enters "<sheetName>" and <RowNumber> 
