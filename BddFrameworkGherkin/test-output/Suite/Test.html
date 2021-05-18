@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 11 14:15:55 BST 2021</td>
+<td>Started on:</td><td>Tue May 18 16:56:39 BST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>60 seconds (60247 ms)</td>
+<tr><td>Total time:</td><td>159 seconds (159508 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,41 +75,67 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestRunners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
-<td><div><pre>java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru - test]
-	at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
-	at ?.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
-... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1314228008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1314228008'><pre>java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru - test]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
-	at ?.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
+<td title='TestRunners.LoginRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check login is succesful with valid credential", "Optional[Testing of the Logging Application]"</td>
+<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : User or Password is not valid}
+  (Session info: chrome=89.0.4389.114): User or Password is not valid
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.248.98&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e1df12eb63467d6604e50e399ed42076
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+	at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2039204917", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2039204917'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : User or Password is not valid}
+  (Session info: chrome=89.0.4389.114): User or Password is not valid
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.248.98&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e1df12eb63467d6604e50e399ed42076
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+	at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:77)
 </pre></div></td>
-<td>18</td>
-<td>TestRunners.LoginRunner@4bec1f0c</td></tr>
+<td>135</td>
+<td>TestRunners.LoginRunnerTestNG@64729b1e</td></tr>
 <tr>
-<td title='TestRunners.LoginRunner2.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
-<td><div><pre>java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru - test]
-	at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
-	at ?.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
-... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1055800875", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1055800875'><pre>java.lang.AssertionError: expected [Guru99 Bank Manager HomePage] but found [Guru - test]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at stepDefininitions.LoginSteps.customer_is_re_directed_to_web_with_test(LoginSteps.java:110)
-	at ?.Customer is re-directed to web with Guru - test(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/Login.feature:15)
+<td title='TestRunners.LoginRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.248.98&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+	at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace922349326", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace922349326'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.248.98&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+	at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:77)
 </pre></div></td>
-<td>10</td>
-<td>TestRunners.LoginRunner2@29ca901e</td></tr>
+<td>153</td>
+<td>TestRunners.LoginRunnerTestNG@64729b1e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -119,15 +145,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestRunners.LoginRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
+<td title='TestRunners.LoginRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check login is succesful with valid credential", "Optional[Testing of the Logging Application]"</td>
 <td></td>
-<td>17</td>
-<td>TestRunners.LoginRunner@4bec1f0c</td></tr>
+<td>153</td>
+<td>TestRunners.LoginRunnerTestNG@64729b1e</td></tr>
 <tr>
-<td title='TestRunners.LoginRunner2.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
+<td title='TestRunners.LoginRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
 <td></td>
-<td>12</td>
-<td>TestRunners.LoginRunner2@29ca901e</td></tr>
+<td>154</td>
+<td>TestRunners.LoginRunnerTestNG@64729b1e</td></tr>
 </table><p>
 </body>
 </html>

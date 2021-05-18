@@ -9,7 +9,7 @@ Feature: Testing of the Logging Application
   ############################   I   ################################
   @One @Parallel
   Scenario Outline: Unsuccessful login to the app
-    #"amidn" & "password" is passed as argument in the method
+   
     When Customer enters correct <login> and <password> 
     And Customer clicks Login button
     Then Customer is re-directed to web with <Welcome>
@@ -30,8 +30,8 @@ Feature: Testing of the Logging Application
     Then Customer is successfully Logged in to the application
 
   ###############################   III   #################################
-  @Three
-  @ExTestWithTable
+   @One
+  # @ExTestWithTable
   Scenario Outline: Check login is succesful with valid credential
    
      When user enters "<sheetName>" and <RowNumber> 

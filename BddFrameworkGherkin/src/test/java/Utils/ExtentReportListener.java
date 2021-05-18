@@ -43,8 +43,8 @@ public class ExtentReportListener {
 		extent.setSystemInfo("Application", "guru99");
 		extent.setSystemInfo("Operating System", System.getProperty("os.name"));
 		extent.setSystemInfo("User Name", System.getProperty("user.name"));
-	System.out.println("System Info. set in Extent Report");
-	return extent;
+		System.out.println("System Info. set in Extent Report");
+		return extent;
 	}
 	
 	public static void testStepHandle(String teststatus,WebDriver driver,ExtentTest extenttest,Throwable throwable)

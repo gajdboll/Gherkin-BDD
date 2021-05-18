@@ -13,6 +13,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.GherkinKeyword;
+import com.aventstack.extentreports.gherkin.model.Feature;
+import com.aventstack.extentreports.gherkin.model.Scenario;
+
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import BaseUtil.Base;
@@ -21,6 +27,7 @@ import Transformation.CorrectCredentials;
 import Transformation.EmailTransform;
 import Transformation.PassLength;
 import Utils.ExcelReader;
+import Utils.ExtentReportListener;
 import cucumber.api.Transform;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
@@ -32,21 +39,21 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LoginSteps extends Base{
-
-	//project structure saved into the vaRIABLE
+public class LoginSteps extends ExtentReportListener{
+// Base class no longer exist in this class so we need to include WebDriver if we want to use that extend report
+	public WebDriver Driver;
 	String path = System.getProperty("user.dir");
 	 
 	
 	
-	private Base base;
+	/*private Base base;
 	//private WebDriver Driver;
 	public LoginSteps( ) {}
 	//Dependency Injection
 	public LoginSteps(Base base)
 	{
 		this.base = base;
-	}
+	}*/
 //////////That listed part need to be added if we want to use nested class
 //new object need to be updated with those details below?? no idea why yet - but only in new Cucumber
 @DataTableType(replaceWithEmptyString = "[blank]")
@@ -62,7 +69,7 @@ public User convert(Map<String, String> entry){
 		System.out.println("1. Official web");
 	    WebDriverManager.chromedriver().setup();
 	    WebDriverManager.edgedriver().setup();
-	 
+	    Driver = new ChromeDriver();
 		 
 	}
 	@After
@@ -74,12 +81,27 @@ public User convert(Map<String, String> entry){
 	}
   
 	@Given("Customer is on official app web")
-	public void customer_is_on_official_app_web() {    
-		Driver = new ChromeDriver();
-		//base.Driver.get("http://demo.guru99.com/V4/");
+	public void customer_is_on_official_app_web() {  
+		ExtentTest logInfo = null;
+		try
+		{
+			 
+			test = extent.createTest(Feature.class,"Testing of the Logging Application");
+			test=test.createNode(Scenario.class,"Unsuccessful login to the app");
+			logInfo=test.createNode(new GherkinKeyword("Given"),"Customer is on the official web");
+			 
+
 		Driver.navigate().to("http://demo.guru99.com/V4/");
 	    String url = Driver.getCurrentUrl();
 	    System.out.println("Customer enters page "+url);   
+
+	      logInfo.pass("Opened Browser and entered URL");
+	 
+	    
+	}catch(AssertionError | Exception e)
+	{
+		testStepHandle("FAIL",Driver,logInfo,e);
+	}
 	}
 	@When("Customer enters correct login as {string} and enters correct password {string}")
 	public void customer_enters_correct_login_as_and_enters_correct_password(String login, String pass) {
@@ -89,9 +111,21 @@ public User convert(Map<String, String> entry){
 	}
 	@And("Customer clicks Login button")
 	public void customer_clicks_login_button() {
+		ExtentTest logInfo = null;
+		try
+		{
+			logInfo=test.createNode(new GherkinKeyword("And"),"Customer clicks Login button");
+		
 		System.out.println("3. Button gets clicked");
 		LoginPages page = new LoginPages(Driver);
 		page.ClickLogin();
+		
+		logInfo.pass("User clicked on log in");
+		}
+		catch(AssertionError | Exception e)
+		{
+			testStepHandle("FAIL",Driver,logInfo,e);
+		}
 	}
 	@Then("Customer is successfully Logged in to the application")
 	public void customer_is_successfully_logged_in_to_the_application() {
@@ -106,19 +140,46 @@ public User convert(Map<String, String> entry){
 	//those (\\w+) when they are passed as arguments - or (.*) too
 	@When("^Customer enters correct (\\w+) and (\\w+)$")
 	public void customer_enters_correct_admin222_and_pass1(String login, String password) {
+		ExtentTest logInfo = null;
+		try
+		{
+		 
+		logInfo=test.createNode(new GherkinKeyword("When"),"Customer enters username and password");
+		
 		System.out.println("5. Scenario Outline - Credentials passed ");
 		LoginPages page = new LoginPages(Driver);
 		page.EnterLoginCredentials(login, password);
+		
+		logInfo.pass("User entered username and password");
+		//logInfo.pass("Screenshot",MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot(Driver)).build());
+		
+		}
+		catch(AssertionError | Exception e)
+		{
+			testStepHandle("FAIL",Driver,logInfo,e);
+		}
 	}
 	//those (\\w+) when they are passed as arguments - or (.*) too
 	@Then("^Customer is re-directed to web with (.*)$")
 	public void customer_is_re_directed_to_web_with_test(String Welcome) {
+		ExtentTest logInfo = null;
+		try
+		{
+		logInfo=test.createNode(new GherkinKeyword("Then"),"Customer is re-directed to web");
 		System.out.println("6. Moved to Web - with text - Assertion");
 		String expectedTab= "Guru99 Bank Manager HomePage";
 		//below there is error handler - driver
 		if(Welcome.equalsIgnoreCase(expectedTab)) { System.out.println("Success");} else {	Driver.switchTo().alert().accept(); Driver.switchTo().window(Welcome);	System.out.println("Failure - try it next time");
 			}
 		Assert.assertEquals(Welcome,expectedTab);	
+		logInfo.pass("User logs into Guru99");
+		//logInfo.pass("Screenshot",MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot(Driver)).build());
+		
+		
+		}catch(AssertionError | Exception e)
+		{
+			testStepHandle("FAIL",Driver,logInfo,e);
+		}
 	}
 	@When("Customer enters correct login credentials")
 	public void enterCredentialsFromDataTable(DataTable table) {
@@ -163,9 +224,15 @@ public User convert(Map<String, String> entry){
 	  @When("user enters {string} and {int}")
 		public void EcelPassing(String Login, Integer RowNumber) throws InvalidFormatException, IOException
 	{
-		ExcelReader reader = new ExcelReader();
-		 
-		List<Map<String, String>> testData = reader.getData("C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\automation.xlsx", Login);
+		  	ExtentTest logInfo = null;
+		  	ExcelReader reader = new ExcelReader();
+			 
+			List<Map<String, String>> testData = reader.getData("C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\automation.xlsx", Login);
+		  try
+			{
+			 
+			logInfo=test.createNode(new GherkinKeyword("When"),"Customer enters username and password");
+		
 			System.out.println("final check");
 			
 			String dataUser = testData.get(RowNumber).get("username");
@@ -179,7 +246,14 @@ public User convert(Map<String, String> entry){
 			System.out.println("UserName :" + dataUser);
 			System.out.println("Password :" + dataPassword);
 			
+			logInfo.pass("User logs into Guru99");
+			//logInfo.pass("Screenshot",MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot(Driver)).build());
 			
+			
+			}catch(AssertionError | Exception e)
+			{
+				testStepHandle("FAIL",Driver,logInfo,e);
+			}
 			
 		}
 	//new methods for Tranformation scenario
