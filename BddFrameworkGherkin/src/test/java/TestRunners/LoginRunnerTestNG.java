@@ -23,9 +23,9 @@ plugin = { "pretty", "html:target/HTMLReport/HTMLREPORT.html",
 )
 
 public class LoginRunnerTestNG extends AbstractTestNGCucumberTests{
-	/* @Override
+		@Override
 	    @DataProvider(parallel = true)
 	    public Object[][] scenarios() {
 	        return super.scenarios();
-	    }*/
+	    }
 }

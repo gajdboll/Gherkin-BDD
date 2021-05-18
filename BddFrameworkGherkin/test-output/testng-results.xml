@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="2" ignored="0" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26094" started-at="2021-05-18T06:55:11Z" finished-at="2021-05-18T06:55:37Z">
+  <suite name="Default suite" duration-ms="60605" started-at="2021-05-18T06:56:36Z" finished-at="2021-05-18T06:57:37Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="26094" started-at="2021-05-18T06:55:11Z" finished-at="2021-05-18T06:55:37Z">
+    <test name="Default test" duration-ms="60605" started-at="2021-05-18T06:56:36Z" finished-at="2021-05-18T06:57:37Z">
       <class name="TestRunners.LoginRunnerTestNG">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="setUpClass" is-config="true" duration-ms="1127" started-at="2021-05-18T06:55:11Z" finished-at="2021-05-18T06:55:12Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="setUpClass" is-config="true" duration-ms="1434" started-at="2021-05-18T06:56:36Z" finished-at="2021-05-18T06:56:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" duration-ms="13018" started-at="2021-05-18T06:55:12Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T06:55:25Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" duration-ms="58469" started-at="2021-05-18T06:56:37Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T06:57:36Z">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" duration-ms="11389" started-at="2021-05-18T06:55:25Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T06:55:36Z">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" duration-ms="42698" started-at="2021-05-18T06:56:37Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T06:57:20Z">
           <params>
             <param index="0">
               <value>
@@ -50,8 +50,8 @@
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LIE-CZ9NTC2', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62323}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4130ea130e7dcd772d5b25ec4ed56053]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0bc59fc394d21ea75ec0d90e9a492190]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : User or Password is not valid}
@@ -59,24 +59,84 @@ Session ID: 4130ea130e7dcd772d5b25ec4ed56053]]>
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LIE-CZ9NTC2', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62323}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 4130ea130e7dcd772d5b25ec4ed56053
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0bc59fc394d21ea75ec0d90e9a492190
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:287)
-at stepDefininitions.LoginSteps.customer_is_successfully_logged_in_to_the_application(LoginSteps.java:100)
-at ✽.Customer is successfully Logged in to the application(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginChrome.feature:40)
+at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:70)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="tearDownClass" is-config="true" duration-ms="503" started-at="2021-05-18T06:55:36Z" finished-at="2021-05-18T06:55:37Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" duration-ms="58522" started-at="2021-05-18T06:56:37Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T06:57:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check login is succesful with valid credential"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Testing of the Logging Application]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="runScenario" duration-ms="39708" started-at="2021-05-18T06:56:37Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-18T06:57:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check login is succesful with valid credential"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Testing of the Logging Application]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.UnhandledAlertException">
+            <message>
+              <![CDATA[unexpected alert open: {Alert text : User or Password is not valid}
+  (Session info: MicrosoftEdge=90.0.818.62): User or Password is not valid
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LIE-CZ9NTC2', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 90.0.818.62, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:62443}, msedge: {msedgedriverVersion: 90.0.818.62 (0fca3b62331f6f..., userDataDir: C:\Users\kgajdosz\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 06cee1e6f6c7eb6e4fde6a639cefc52a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : User or Password is not valid}
+  (Session info: MicrosoftEdge=90.0.818.62): User or Password is not valid
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LIE-CZ9NTC2', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 90.0.818.62, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:62443}, msedge: {msedgedriverVersion: 90.0.818.62 (0fca3b62331f6f..., userDataDir: C:\Users\kgajdosz\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 06cee1e6f6c7eb6e4fde6a639cefc52a
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:70)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@72b6cbcc]" name="tearDownClass" is-config="true" duration-ms="581" started-at="2021-05-18T06:57:36Z" finished-at="2021-05-18T06:57:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

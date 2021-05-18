@@ -5,7 +5,7 @@
     <classes>
       <class name="TestRunners.LoginRunnerTestNG">
         <methods>
-          <include name="runScenario" invocation-numbers="1"/>
+          <include name="runScenario" invocation-numbers="3 1"/>
           <include name="tearDownClass"/>
           <include name="setUpClass"/>
         </methods>
