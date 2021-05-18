@@ -1,9 +1,11 @@
 package stepDefininitions;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +20,7 @@ import Pages.LoginPages;
 import Transformation.CorrectCredentials;
 import Transformation.EmailTransform;
 import Transformation.PassLength;
+import Utils.ExcelReader;
 import cucumber.api.Transform;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
@@ -157,6 +160,28 @@ public User convert(Map<String, String> entry){
 		    String url = Driver.getCurrentUrl();
 		    System.out.println("Customer enters page "+url); 
       }
+	  @When("user enters {string} and {int}")
+		public void EcelPassing(String Login, Integer RowNumber) throws InvalidFormatException, IOException
+	{
+		ExcelReader reader = new ExcelReader();
+		 
+		List<Map<String, String>> testData = reader.getData("C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\automation.xlsx", Login);
+			System.out.println("final check");
+			
+			String dataUser = testData.get(RowNumber).get("username");
+			String dataPassword = testData.get(RowNumber).get("password");
+			
+		
+			Driver.findElement(By.name("uid")).sendKeys(dataUser);
+			Driver.findElement(By.name("password")).sendKeys(dataPassword);
+			
+
+			System.out.println("UserName :" + dataUser);
+			System.out.println("Password :" + dataPassword);
+			
+			
+			
+		}
 	//new methods for Tranformation scenario
 	@When("Customer enters correct login credentials2")
 	public void customer_enters_correct_login_credentials2(io.cucumber.datatable.DataTable table) {

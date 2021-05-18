@@ -34,17 +34,16 @@ Feature: Testing of the Logging Application
   @ExTestWithTable
   Scenario Outline: Check login is succesful with valid credential
    
-   
-    When user enters "<sheetName>" and <RowNumber> 
-    And user click on login button and fill out the form
-    Then user is navigate to home page`
+     When user enters "<sheetName>" and <RowNumber> 
+     And Customer clicks Login button
+    Then Customer is re-directed to web with <Welcome>
 
     Examples: 
-      | sheetName | RowNumber |condition|
-      | Login     |         0 |Login|
-      | Login     |         1 |Login|
-     # | Login     |         2 |Login|
-     # | Login     |         3 |Login|
+      | sheetName | RowNumber |Welcome |
+      | Login     |         0 |Guru99 Bank Manager HomePage |  
+      | Login     |         1 |Guru99 Bank Manager HomePage |  
+     # | Login     |         2 |Guru99 Bank Manager HomePage |  
+     # | Login     |         3 |Guru99 Bank Manager HomePage |  
 
     
     
