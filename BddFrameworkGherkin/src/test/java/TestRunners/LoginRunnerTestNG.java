@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		
 features="C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\FeatureFiles", 
-glue= {"stepDefininitions"},tags= "@Parallel"
+glue= {"stepDefininitions"},tags= "@ExTestWithTable1"
 ,monochrome = true,
 plugin = { "pretty", "html:target/HTMLReport/HTMLREPORT.html",
 "junit:target/JunitReport/report.xml",
@@ -23,9 +23,9 @@ plugin = { "pretty", "html:target/HTMLReport/HTMLREPORT.html",
 )
 
 public class LoginRunnerTestNG extends AbstractTestNGCucumberTests{
-	 @Override
+	/* @Override
 	    @DataProvider(parallel = true)
 	    public Object[][] scenarios() {
 	        return super.scenarios();
-	    }
+	    }*/
 }
