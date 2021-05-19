@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" data-provider-thread-count="3">
   <listeners>
     <listener class-name="Utils.TestListener"/>
   </listeners>
@@ -8,7 +8,7 @@
     <classes>
       <class name="TestRunners.LoginRunnerTestNG">
         <methods>
-          <include name="runScenario" invocation-numbers="0 3"/>
+          <include name="runScenario" invocation-numbers="2 0 1 3"/>
           <include name="tearDownClass"/>
           <include name="setUpClass"/>
         </methods>

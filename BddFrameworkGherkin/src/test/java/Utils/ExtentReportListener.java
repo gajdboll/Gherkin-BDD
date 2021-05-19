@@ -34,7 +34,7 @@ public class ExtentReportListener {
 		report = new ExtentSparkReporter(reportLocation);
 		report.config().setDocumentTitle("Automation Test Report");
 		report.config().setReportName("BDD Automation Test Report");
-		report.config().setTheme(Theme.STANDARD);
+		report.config().setTheme(Theme.DARK);
 		System.out.println("Extent Report location initialized");
 		
 		

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 19 08:24:57 BST 2021</td>
+<td>Started on:</td><td>Wed May 19 09:08:12 BST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>45 seconds (45051 ms)</td>
+<tr><td>Total time:</td><td>113 seconds (113465 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,83 +76,191 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='TestRunners.LoginRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
-<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: MicrosoftEdge=90.0.818.62)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-	at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace836386144", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace836386144'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-	at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:77)
-</pre></div></td>
-<td>15</td>
-<td>TestRunners.LoginRunnerTestNG@64729b1e</td></tr>
-<tr>
-<td title='TestRunners.LoginRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check login is succesful with valid credential", "Optional[Testing of the Logging Application]"</td>
-<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : User or Password is not valid}
-  (Session info: chrome=89.0.4389.114): User or Password is not valid
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63195}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ef23e2efb409a0c97868dd30d9af29cf
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.243.219&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 90.0.818.62, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:54306}, msedge: {msedgedriverVersion: 90.0.818.62 (0fca3b62331f6f..., userDataDir: C:\Users\kgajdosz\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7a7825720cf6924df207dc17237e88ab
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-	at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1514778448", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1514778448'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : User or Password is not valid}
-  (Session info: chrome=89.0.4389.114): User or Password is not valid
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at stepDefininitions.LoginSteps.customer_enters_correct_admin222_and_pass1_on_Edge(LoginSteps.java:210)
+	at ?.Customer is on official app web on Edge(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginEdge.feature:7)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace855254199", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace855254199'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: MicrosoftEdge=90.0.818.62)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63195}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ef23e2efb409a0c97868dd30d9af29cf
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.243.219&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 90.0.818.62, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:54306}, msedge: {msedgedriverVersion: 90.0.818.62 (0fca3b62331f6f..., userDataDir: C:\Users\kgajdosz\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7a7825720cf6924df207dc17237e88ab
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-	at stepDefininitions.LoginSteps.TernDown(LoginSteps.java:77)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at stepDefininitions.LoginSteps.customer_enters_correct_admin222_and_pass1_on_Edge(LoginSteps.java:210)
+	at ?.Customer is on official app web on Edge(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginEdge.feature:7)
 </pre></div></td>
-<td>7</td>
+<td>71</td>
 <td>TestRunners.LoginRunnerTestNG@64729b1e</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
 <tr>
 <td title='TestRunners.LoginRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
-<td></td>
-<td>9</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=89.0.4389.114)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.243.219&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54264}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 634c53cce14f665faba286b5c5f5fa98
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at Utils.ExtentReportListener.captureScreenshot(ExtentReportListener.java:84)
+	at Utils.ExtentReportListener.testStepHandle(ExtentReportListener.java:61)
+	at stepDefininitions.LoginSteps.customer_is_on_official_app_web(LoginSteps.java:103)
+	at ?.Customer is on official app web(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginChrome.feature:7)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace417751855", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace417751855'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=89.0.4389.114)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.243.219&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54264}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 634c53cce14f665faba286b5c5f5fa98
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at Utils.ExtentReportListener.captureScreenshot(ExtentReportListener.java:84)
+	at Utils.ExtentReportListener.testStepHandle(ExtentReportListener.java:61)
+	at stepDefininitions.LoginSteps.customer_is_on_official_app_web(LoginSteps.java:103)
+	at ?.Customer is on official app web(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginChrome.feature:7)
+</pre></div></td>
+<td>73</td>
 <td>TestRunners.LoginRunnerTestNG@64729b1e</td></tr>
 <tr>
-<td title='TestRunners.LoginRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check login is succesful with valid credential", "Optional[Testing of the Logging Application]"</td>
-<td></td>
-<td>9</td>
+<td title='TestRunners.LoginRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=89.0.4389.114)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.243.219&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54263}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d067bd750bddd7dbbb61a10901beb0b6
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at Utils.ExtentReportListener.captureScreenshot(ExtentReportListener.java:84)
+	at Utils.ExtentReportListener.testStepHandle(ExtentReportListener.java:61)
+	at stepDefininitions.LoginSteps.customer_is_on_official_app_web(LoginSteps.java:103)
+	at ?.Customer is on official app web(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginChrome.feature:7)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1943322302", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1943322302'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=89.0.4389.114)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.243.219&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\kgajdosz\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54263}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d067bd750bddd7dbbb61a10901beb0b6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at Utils.ExtentReportListener.captureScreenshot(ExtentReportListener.java:84)
+	at Utils.ExtentReportListener.testStepHandle(ExtentReportListener.java:61)
+	at stepDefininitions.LoginSteps.customer_is_on_official_app_web(LoginSteps.java:103)
+	at ?.Customer is on official app web(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginChrome.feature:7)
+</pre></div></td>
+<td>74</td>
+<td>TestRunners.LoginRunnerTestNG@64729b1e</td></tr>
+<tr>
+<td title='TestRunners.LoginRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: TestRunners.LoginRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Unsuccessful login to the app", "Optional[Testing of the Logging Application]"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: MicrosoftEdge=90.0.818.62)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.243.219&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 90.0.818.62, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:54426}, msedge: {msedgedriverVersion: 90.0.818.62 (0fca3b62331f6f..., userDataDir: C:\Users\kgajdosz\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c74a49111888814995fbcf564a36c23
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at stepDefininitions.LoginSteps.customer_enters_correct_admin222_and_pass1_on_Edge(LoginSteps.java:210)
+	at ?.Customer is on official app web on Edge(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginEdge.feature:7)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace203193925", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace203193925'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: MicrosoftEdge=90.0.818.62)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LIE-CZ9NTC2&apos;, ip: &apos;10.37.243.219&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 90.0.818.62, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:54426}, msedge: {msedgedriverVersion: 90.0.818.62 (0fca3b62331f6f..., userDataDir: C:\Users\kgajdosz\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c74a49111888814995fbcf564a36c23
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at stepDefininitions.LoginSteps.customer_enters_correct_admin222_and_pass1_on_Edge(LoginSteps.java:210)
+	at ?.Customer is on official app web on Edge(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginEdge.feature:7)
+</pre></div></td>
+<td>38</td>
 <td>TestRunners.LoginRunnerTestNG@64729b1e</td></tr>
 </table><p>
 </body>

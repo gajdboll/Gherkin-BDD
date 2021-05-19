@@ -105,9 +105,22 @@ public User convert(Map<String, String> entry){
 	}
 	@When("Customer enters correct login as {string} and enters correct password {string}")
 	public void customer_enters_correct_login_as_and_enters_correct_password(String login, String pass) {
+		ExtentTest logInfo = null;
+		try
+		{
+		 
+		logInfo=test.createNode(new GherkinKeyword("When"),"Customer enters username and password");
+		
 		System.out.println("2. Login process (correct credentials)");
 		LoginPages page = new LoginPages(Driver);
 		page.EnterLoginCredentials(login, pass);
+		 logInfo.pass("Opened Browser and entered URL");
+		 
+		    
+		}catch(AssertionError | Exception e)
+		{
+			testStepHandle("FAIL",Driver,logInfo,e);
+		}
 	}
 	@And("Customer clicks Login button")
 	public void customer_clicks_login_button() {
@@ -129,6 +142,11 @@ public User convert(Map<String, String> entry){
 	}
 	@Then("Customer is successfully Logged in to the application")
 	public void customer_is_successfully_logged_in_to_the_application() {
+		ExtentTest logInfo = null;
+		try
+		{
+		logInfo=test.createNode(new GherkinKeyword("Then"),"Customer is re-directed to web");
+		
 		System.out.println("4. Successfully Logged In - Assertion");
 		String expectedHtmlUrl= "http://demo.guru99.com/V4/manager/Managerhomepage.php";
 		String actualurl = Driver.getCurrentUrl();
@@ -136,6 +154,14 @@ public User convert(Map<String, String> entry){
 		if(expectedHtmlUrl.equalsIgnoreCase(actualurl)) { System.out.println("Success");} else {	Driver.close();
 		Driver.quit();		System.out.println("Failure - try it next time");}
 		Assert.assertEquals(actualurl,expectedHtmlUrl);
+		logInfo.pass("User logs into Guru99");
+		//logInfo.pass("Screenshot",MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot(Driver)).build());
+		
+		
+		}catch(AssertionError | Exception e)
+		{
+			testStepHandle("FAIL",Driver,logInfo,e);
+		}
 }
 	//those (\\w+) when they are passed as arguments - or (.*) too
 	@When("^Customer enters correct (\\w+) and (\\w+)$")
@@ -183,6 +209,13 @@ public User convert(Map<String, String> entry){
 	}
 	@When("Customer enters correct login credentials")
 	public void enterCredentialsFromDataTable(DataTable table) {
+		ExtentTest logInfo = null;
+		try
+		{
+		 
+		logInfo=test.createNode(new GherkinKeyword("When"),"Customer enters username and password");
+		
+	 
 		System.out.println("7. Enter credentials based on dataTables");
 		 //line below used for both techniques - possibilities
         List<List<String>> cells = table.cells();
@@ -191,35 +224,90 @@ public User convert(Map<String, String> entry){
         //System.out.println("The value is : " + cells.get(1).get(1));
         LoginPages page = new LoginPages(Driver);
 		page.EnterLoginCredentials(cells.get(1).get(0), cells.get(1).get(1));
+		 logInfo.pass("Opened Browser and entered URL");
+		 
+		    
+		}catch(AssertionError | Exception e)
+		{
+			testStepHandle("FAIL",Driver,logInfo,e);
+		}
 		
 	}
 	  @Given("Customer is on official app web on firefox")
       public void customer_enters_correct_admin222_and_pass1_on_firefox() 
       {
+			ExtentTest logInfo = null;
+			try
+			{
+				 
+				test = extent.createTest(Feature.class,"Testing of the Logging Application");
+				test=test.createNode(Scenario.class,"Unsuccessful login to the app");
+				logInfo=test.createNode(new GherkinKeyword("Given"),"Customer is on the official web");
+				 
          System.out.println("Firefox Browser");
          Driver = new FirefoxDriver();
 			Driver.navigate().to("http://demo.guru99.com/V4/");
 		    String url = Driver.getCurrentUrl();
 		    System.out.println("Customer enters page "+url); 
+		    
+		    logInfo.pass("Opened Browser and entered URL");
+			 
+		    
+			}catch(AssertionError | Exception e)
+			{
+				testStepHandle("FAIL",Driver,logInfo,e);
+			}
   }
 	  @Given("Customer is on official app web on Edge")
       public void customer_enters_correct_admin222_and_pass1_on_Edge() 
       {
+			ExtentTest logInfo = null;
+			try
+			{
+				 
+				test = extent.createTest(Feature.class,"Testing of the Logging Application");
+				test=test.createNode(Scenario.class,"Unsuccessful login to the app");
+				logInfo=test.createNode(new GherkinKeyword("Given"),"Customer is on the official web");
+				 
+      
          System.out.println("Edge Browser");
          Driver = new EdgeDriver();
 			Driver.navigate().to("http://demo.guru99.com/V4/");
 		    String url = Driver.getCurrentUrl();
 		    System.out.println("Customer enters page "+url); 
+		    logInfo.pass("Opened Browser and entered URL");
+			 
+		    
+			}catch(AssertionError | Exception e)
+			{
+				testStepHandle("FAIL",Driver,logInfo,e);
+			}
   }
 	  
 	  @Given("Customer is on official app web on IE")
       public void customer_enters_correct_admin222_and_pass1_on_IE() 
       {
+		  
+    		ExtentTest logInfo = null;
+    		try
+    		{
+    			 
+    			test = extent.createTest(Feature.class,"Testing of the Logging Application");
+    			test=test.createNode(Scenario.class,"Unsuccessful login to the app");
+    			logInfo=test.createNode(new GherkinKeyword("Given"),"Customer is on the official web");
+    			 
          System.out.println("IE Browser");
          Driver = new InternetExplorerDriver();
 			Driver.navigate().to("http://demo.guru99.com/V4/");
 		    String url = Driver.getCurrentUrl();
 		    System.out.println("Customer enters page "+url); 
+		    logInfo.pass("Opened Browser and entered URL");
+			 
+		    
+    		}catch(AssertionError | Exception e)
+    		{
+    			testStepHandle("FAIL",Driver,logInfo,e);
+    		}
       }
 	  @When("user enters {string} and {int}")
 		public void EcelPassing(String Login, Integer RowNumber) throws InvalidFormatException, IOException
@@ -259,6 +347,13 @@ public User convert(Map<String, String> entry){
 	//new methods for Tranformation scenario
 	@When("Customer enters correct login credentials2")
 	public void customer_enters_correct_login_credentials2(io.cucumber.datatable.DataTable table) {
+		ExtentTest logInfo = null;
+		try
+		{
+		 
+		logInfo=test.createNode(new GherkinKeyword("When"),"Customer enters username and password");
+		
+	
 		 //method raw no longer exist so we are using method cell to get access to cels
         //line below used for both techniques - possibilities
         List<List<String>> cells = table.cells();
@@ -277,6 +372,13 @@ public User convert(Map<String, String> entry){
             System.out.println("the Password  is: "+ user.password);
             passField.sendKeys(user.password);
         }
+        logInfo.pass("Opened Browser and entered URL");
+   	 
+	    
+		}catch(AssertionError | Exception e)
+		{
+			testStepHandle("FAIL",Driver,logInfo,e);
+		}
 	
 	}
 	//class used for DataTable example
