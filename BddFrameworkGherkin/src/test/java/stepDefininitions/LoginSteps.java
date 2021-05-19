@@ -21,6 +21,7 @@ import Transformation.CorrectCredentials;
 import Transformation.EmailTransform;
 import Transformation.PassLength;
 import Utils.ExcelReader;
+import cucumber.api.Scenario;
 import cucumber.api.Transform;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
@@ -57,13 +58,21 @@ public User convert(Map<String, String> entry){
   );
 }
 	@Before
-	public void Beginning()
+	public void Beginning(Scenario scenario)
 	{
-		System.out.println("1. Official web");
+		System.out.println("1. Official web " + scenario.getName()); // in the nexy lesson we change that method to methsd getGherkinName()
 	    WebDriverManager.chromedriver().setup();
 	    WebDriverManager.edgedriver().setup();
 	 
-		 
+		 /*Before annottation can be used only to specific tags 
+		  * I present that below - so we could use the tags and that technique to download only one driver in stead of at the same time
+		  *  @Before("@Edge")
+		public void Beginning(Scenario scenario)
+		{
+		System.out.println("1. Official web " + scenario.getName()); // in the nexy lesson we change that method to methsd getGherkinName()
+	    );
+	    WebDriverManager.edgedriver().setup();
+	 	}		  */
 	}
 	@After
 	public void TernDown()
