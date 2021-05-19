@@ -23,9 +23,10 @@ plugin = { "pretty", "html:target/HTMLReport/HTMLREPORT.html",
 )
 
 public class LoginRunnerTestNG extends AbstractTestNGCucumberTests{
-	 @Override
+	/* That code alloews you to run all the test parallely
+	 *  @Override
 	    @DataProvider(parallel = true)
 	    public Object[][] scenarios() {
 	        return super.scenarios();
-	    }
+	    }*/
 }
