@@ -1,10 +1,32 @@
 # V9 Parallel testing
+------------------------------
+
+
+
 
 *********Reference*********************************************************************************************************************
 https://cucumber.io/docs/guides/parallel-execution/#testng
 
 https://maven.apache.org/surefire/maven-surefire-plugin/examples/fork-options-and-parallel-execution.html
+
+https://www.youtube.com/watch?v=OnpuqA2lPUk&list=PLUeDIlio4THGVyUyXUQniMu7Vagd9d_5P&index=12
 ****************************************************************************************************************************
+TestNg .xml file - how to reduce number of threads below
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" verbose="1" configfailurepolicy="skip" data-provider-thread-count="3">
+  <test name="Test">  
+  	<classes>
+  	 		<class name ="TestRunners.LoginRunner"/>
+  		<class name ="TestRunners.LoginRunner2"/>
+ 	 </classes>
+  </test> 
+</suite> <!-- Suite -->
+
+**********************
 Parallel Test Execution
 Basically, there are two ways in maven-surefire-plugin to achieve parallel test execution.
 

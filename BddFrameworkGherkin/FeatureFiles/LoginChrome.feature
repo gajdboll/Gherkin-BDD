@@ -42,8 +42,8 @@ Feature: Testing of the Logging Application
       | sheetName | RowNumber |Welcome |
       | Login     |         0 |Guru99 Bank Manager HomePage |  
       | Login     |         1 |Guru99 Bank Manager HomePage |  
-     # | Login     |         2 |Guru99 Bank Manager HomePage |  
-     # | Login     |         3 |Guru99 Bank Manager HomePage |  
+    # | Login     |         2 |Guru99 Bank Manager HomePage |  
+    # | Login     |         3 |Guru99 Bank Manager HomePage |  
 
     
     
