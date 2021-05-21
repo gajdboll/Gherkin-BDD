@@ -58,9 +58,10 @@ public User convert(Map<String, String> entry){
   );
 }
 	@Before
-	public void Beginning(Scenario scenario)
+	//public void Beginning(Scenario scenario) // - for some reason that version doesnt work sometimes - > check the videos if you want to pass the scenario as a parameter
+	public void Beginning( )
 	{
-		System.out.println("1. Official web " + scenario.getName()); // in the nexy lesson we change that method to methsd getGherkinName()
+		System.out.println("1. Official web " );//+ scenario.getName()); // in the nexy lesson we change that method to methsd getGherkinName()
 	    WebDriverManager.chromedriver().setup();
 	    WebDriverManager.edgedriver().setup();
 	 
