@@ -15,7 +15,7 @@ import com.aventstack.extentreports.ExtentReports;
 import stepDefininitions.LoginSteps;
 
 public class TestListener extends ExtentReportListener implements ITestListener{
-	private static Logger logger = LogManager.getLogger(TestListener.class);
+	private static Logger logger = LogManager.getLogger(LoginSteps.class);
 	private static ExtentReports extent;
 
 	public void onTestStart(ITestResult result)

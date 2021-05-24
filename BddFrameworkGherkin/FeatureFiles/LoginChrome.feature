@@ -16,7 +16,7 @@ Feature: Testing of the Logging Application
 
     Examples: 
       | login      | password | Welcome                      |
-      | admin222   | pass1    | Guru - test                  |
+      #| admin222   | pass1    | Guru - test                  |
       | mngr322726 | ratahYn  | Guru99 Bank Manager HomePage |       
 
   ## Scenario for datatable scenario
@@ -30,7 +30,7 @@ Feature: Testing of the Logging Application
     Then Customer is successfully Logged in to the application
 
   ###############################   III   #################################
-   @One
+   @Tree
   # @ExTestWithTable
   Scenario Outline: Check login is succesful with valid credential
    

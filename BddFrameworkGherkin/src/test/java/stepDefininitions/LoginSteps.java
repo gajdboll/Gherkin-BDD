@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +30,7 @@ import Transformation.EmailTransform;
 import Transformation.PassLength;
 import Utils.ExcelReader;
 import Utils.ExtentReportListener;
+import Utils.TestListener;
 import cucumber.api.Transform;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
@@ -43,7 +46,7 @@ public class LoginSteps extends ExtentReportListener{
 // Base class no longer exist in this class so we need to include WebDriver if we want to use that extend report
 	public WebDriver Driver;
 	String path = System.getProperty("user.dir");
-	 
+	//private static Logger logger = LogManager.getLogger(LoginSteps.class);
 	
 	
 	/*private Base base;
@@ -70,7 +73,7 @@ public User convert(Map<String, String> entry){
 	    WebDriverManager.chromedriver().setup();
 	    WebDriverManager.edgedriver().setup();
 	    Driver = new ChromeDriver();
-		 
+	  //  logger.info("Test Passed1");
 	}
 	@After
 	public void TernDown()
@@ -78,6 +81,7 @@ public User convert(Map<String, String> entry){
 		Driver.quit();	
 		Driver=null;
 		System.out.println("End.");	
+		//logger.info("Test End1");
 	}
   
 	@Given("Customer is on official app web")
@@ -85,12 +89,12 @@ public User convert(Map<String, String> entry){
 		ExtentTest logInfo = null;
 		try
 		{
-			 
+		//	logger.info("Test Passed1");
 			test = extent.createTest(Feature.class,"Testing of the Logging Application");
 			test=test.createNode(Scenario.class,"Unsuccessful login to the app");
 			logInfo=test.createNode(new GherkinKeyword("Given"),"Customer is on the official web");
 			 
-
+		//	logger.info("Test G");
 		Driver.navigate().to("http://demo.guru99.com/V4/");
 	    String url = Driver.getCurrentUrl();
 	    System.out.println("Customer enters page "+url);   
