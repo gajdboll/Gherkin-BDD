@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23517" started-at="2021-05-24T12:36:07Z" finished-at="2021-05-24T12:36:30Z">
+  <suite name="Default suite" duration-ms="18953" started-at="2021-05-24T14:43:50Z" finished-at="2021-05-24T14:44:09Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="23517" started-at="2021-05-24T12:36:07Z" finished-at="2021-05-24T12:36:30Z">
+    <test name="Default test" duration-ms="18953" started-at="2021-05-24T14:43:50Z" finished-at="2021-05-24T14:44:09Z">
       <class name="TestRunners.LoginRunnerTestNG">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="setUpClass" is-config="true" duration-ms="2826" started-at="2021-05-24T12:36:07Z" finished-at="2021-05-24T12:36:10Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="setUpClass" is-config="true" duration-ms="1524" started-at="2021-05-24T14:43:50Z" finished-at="2021-05-24T14:43:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="runScenario" duration-ms="19852" started-at="2021-05-24T12:36:10Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-24T12:36:30Z">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="runScenario" duration-ms="15959" started-at="2021-05-24T14:43:52Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-05-24T14:44:08Z">
           <params>
             <param index="0">
               <value>
@@ -31,7 +31,7 @@
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 at Utils.ExtentReportListener.testStepHandle(ExtentReportListener.java:56)
-at stepDefininitions.LoginSteps.customer_is_on_official_app_web(LoginSteps.java:107)
+at stepDefininitions.LoginSteps.customer_is_on_official_app_web(LoginSteps.java:108)
 at ✽.Customer is on official app web(file:///C:/Users/kgajdosz/Documents/bench%20learning/BDD/Gherkin-Cucumber/BddFrameworkGherkin/FeatureFiles/LoginChrome.feature:7)
 ]]>
             </full-stacktrace>
@@ -39,7 +39,7 @@ at ✽.Customer is on official app web(file:///C:/Users/kgajdosz/Documents/bench
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="tearDownClass" is-config="true" duration-ms="735" started-at="2021-05-24T12:36:30Z" finished-at="2021-05-24T12:36:30Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunners.LoginRunnerTestNG@4e7dc304]" name="tearDownClass" is-config="true" duration-ms="1411" started-at="2021-05-24T14:44:08Z" finished-at="2021-05-24T14:44:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

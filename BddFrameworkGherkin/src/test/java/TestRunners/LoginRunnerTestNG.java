@@ -1,15 +1,13 @@
 package TestRunners;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 
-//import org.junit.runner.RunWith;
 
-//import io.cucumber.junit.Cucumber;
-//import io.cucumber.junit.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-//@RunWith(Cucumber.class)
+
 @CucumberOptions(
 		
 features="C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\FeatureFiles", 
@@ -29,4 +27,8 @@ public class LoginRunnerTestNG extends AbstractTestNGCucumberTests{
 	    public Object[][] scenarios() {
 	        return super.scenarios();
 	    }*/
+	
+
+	
+	
 }

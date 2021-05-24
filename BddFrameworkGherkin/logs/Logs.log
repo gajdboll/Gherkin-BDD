@@ -1,0 +1,6 @@
+2021-05-2415:40:35.656 INFO [main][stepDefininitions.LoginSteps.Beginning(LoginSteps.java:76)]-Web starts here
+2021-05-2415:40:35.741 INFO [main][stepDefininitions.LoginSteps.customer_is_on_official_app_web(LoginSteps.java:92)]-Customer moved to official web
+2021-05-2415:40:38.768 INFO [main][stepDefininitions.LoginSteps.TernDown(LoginSteps.java:84)]-Web is closed and instances are killed
+2021-05-2415:44:02.153 INFO [main][stepDefininitions.LoginSteps.Beginning(LoginSteps.java:76)]-Web starts here
+2021-05-2415:44:02.231 INFO [main][stepDefininitions.LoginSteps.customer_is_on_official_app_web(LoginSteps.java:92)]-Customer moved to official web
+2021-05-2415:44:08.105 INFO [main][stepDefininitions.LoginSteps.TernDown(LoginSteps.java:84)]-Web is closed and instances are killed

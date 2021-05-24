@@ -46,7 +46,7 @@ public class LoginSteps extends ExtentReportListener{
 // Base class no longer exist in this class so we need to include WebDriver if we want to use that extend report
 	public WebDriver Driver;
 	String path = System.getProperty("user.dir");
-	//private static Logger logger = LogManager.getLogger(LoginSteps.class);
+	private static Logger logger = LogManager.getLogger(LoginSteps.class);
 	
 	
 	/*private Base base;
@@ -73,7 +73,7 @@ public User convert(Map<String, String> entry){
 	    WebDriverManager.chromedriver().setup();
 	    WebDriverManager.edgedriver().setup();
 	    Driver = new ChromeDriver();
-	  //  logger.info("Test Passed1");
+	    logger.info("Web starts here");
 	}
 	@After
 	public void TernDown()
@@ -81,7 +81,7 @@ public User convert(Map<String, String> entry){
 		Driver.quit();	
 		Driver=null;
 		System.out.println("End.");	
-		//logger.info("Test End1");
+		logger.info("Web is closed and instances are killed");
 	}
   
 	@Given("Customer is on official app web")
@@ -89,7 +89,7 @@ public User convert(Map<String, String> entry){
 		ExtentTest logInfo = null;
 		try
 		{
-		//	logger.info("Test Passed1");
+			logger.info("Customer moved to official web");
 			test = extent.createTest(Feature.class,"Testing of the Logging Application");
 			test=test.createNode(Scenario.class,"Unsuccessful login to the app");
 			logInfo=test.createNode(new GherkinKeyword("Given"),"Customer is on the official web");
@@ -100,11 +100,14 @@ public User convert(Map<String, String> entry){
 	    System.out.println("Customer enters page "+url);   
 
 	      logInfo.pass("Opened Browser and entered URL");
-	 
+	      logger.info("Customer enters page "+url);
+			
 	    
 	}catch(AssertionError | Exception e)
 	{
 		testStepHandle("FAIL",Driver,logInfo,e);
+		logger.fatal("something went wrong");
+		 
 	}
 	}
 	@When("Customer enters correct login as {string} and enters correct password {string}")
@@ -112,7 +115,7 @@ public User convert(Map<String, String> entry){
 		ExtentTest logInfo = null;
 		try
 		{
-		 
+			logger.info("Customer enters correct login and enters correct password ");
 		logInfo=test.createNode(new GherkinKeyword("When"),"Customer enters username and password");
 		
 		System.out.println("2. Login process (correct credentials)");
@@ -124,6 +127,7 @@ public User convert(Map<String, String> entry){
 		}catch(AssertionError | Exception e)
 		{
 			testStepHandle("FAIL",Driver,logInfo,e);
+			logger.fatal("something went wrong");
 		}
 	}
 	@And("Customer clicks Login button")
@@ -132,7 +136,7 @@ public User convert(Map<String, String> entry){
 		try
 		{
 			logInfo=test.createNode(new GherkinKeyword("And"),"Customer clicks Login button");
-		
+			logger.info("Customer clicks Login button");
 		System.out.println("3. Button gets clicked");
 		LoginPages page = new LoginPages(Driver);
 		page.ClickLogin();
@@ -142,6 +146,7 @@ public User convert(Map<String, String> entry){
 		catch(AssertionError | Exception e)
 		{
 			testStepHandle("FAIL",Driver,logInfo,e);
+			logger.fatal("something went wrong");
 		}
 	}
 	@Then("Customer is successfully Logged in to the application")
@@ -150,6 +155,7 @@ public User convert(Map<String, String> entry){
 		try
 		{
 		logInfo=test.createNode(new GherkinKeyword("Then"),"Customer is re-directed to web");
+		logger.info("Customer is successfully Logged in to the application");
 		
 		System.out.println("4. Successfully Logged In - Assertion");
 		String expectedHtmlUrl= "http://demo.guru99.com/V4/manager/Managerhomepage.php";
@@ -159,12 +165,15 @@ public User convert(Map<String, String> entry){
 		Driver.quit();		System.out.println("Failure - try it next time");}
 		Assert.assertEquals(actualurl,expectedHtmlUrl);
 		logInfo.pass("User logs into Guru99");
+		logger.info("User logs into Guru99");
+		
 		//logInfo.pass("Screenshot",MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot(Driver)).build());
 		
 		
 		}catch(AssertionError | Exception e)
 		{
 			testStepHandle("FAIL",Driver,logInfo,e);
+			logger.fatal("something went wrong");
 		}
 }
 	//those (\\w+) when they are passed as arguments - or (.*) too
@@ -173,7 +182,7 @@ public User convert(Map<String, String> entry){
 		ExtentTest logInfo = null;
 		try
 		{
-		 
+			logger.info("Customer enters correct credentials");
 		logInfo=test.createNode(new GherkinKeyword("When"),"Customer enters username and password");
 		
 		System.out.println("5. Scenario Outline - Credentials passed ");
@@ -187,6 +196,7 @@ public User convert(Map<String, String> entry){
 		catch(AssertionError | Exception e)
 		{
 			testStepHandle("FAIL",Driver,logInfo,e);
+			logger.fatal("something went wrong");
 		}
 	}
 	//those (\\w+) when they are passed as arguments - or (.*) too
@@ -195,6 +205,7 @@ public User convert(Map<String, String> entry){
 		ExtentTest logInfo = null;
 		try
 		{
+			logger.info("Customer is re-directed to web");
 		logInfo=test.createNode(new GherkinKeyword("Then"),"Customer is re-directed to web");
 		System.out.println("6. Moved to Web - with text - Assertion");
 		String expectedTab= "Guru99 Bank Manager HomePage";
@@ -209,6 +220,7 @@ public User convert(Map<String, String> entry){
 		}catch(AssertionError | Exception e)
 		{
 			testStepHandle("FAIL",Driver,logInfo,e);
+			logger.fatal("something went wrong");
 		}
 	}
 	@When("Customer enters correct login credentials")
@@ -216,7 +228,7 @@ public User convert(Map<String, String> entry){
 		ExtentTest logInfo = null;
 		try
 		{
-		 
+			logger.info("Customer enters correct login credentials");
 		logInfo=test.createNode(new GherkinKeyword("When"),"Customer enters username and password");
 		
 	 
@@ -234,6 +246,7 @@ public User convert(Map<String, String> entry){
 		}catch(AssertionError | Exception e)
 		{
 			testStepHandle("FAIL",Driver,logInfo,e);
+			logger.fatal("something went wrong");
 		}
 		
 	}
@@ -243,7 +256,7 @@ public User convert(Map<String, String> entry){
 			ExtentTest logInfo = null;
 			try
 			{
-				 
+				logger.info("Customer is on official app web on firefox");
 				test = extent.createTest(Feature.class,"Testing of the Logging Application");
 				test=test.createNode(Scenario.class,"Unsuccessful login to the app");
 				logInfo=test.createNode(new GherkinKeyword("Given"),"Customer is on the official web");
@@ -260,6 +273,7 @@ public User convert(Map<String, String> entry){
 			}catch(AssertionError | Exception e)
 			{
 				testStepHandle("FAIL",Driver,logInfo,e);
+				logger.fatal("something went wrong");
 			}
   }
 	  @Given("Customer is on official app web on Edge")
@@ -268,7 +282,7 @@ public User convert(Map<String, String> entry){
 			ExtentTest logInfo = null;
 			try
 			{
-				 
+				logger.info("Customer is on official app web on Edge");
 				test = extent.createTest(Feature.class,"Testing of the Logging Application");
 				test=test.createNode(Scenario.class,"Unsuccessful login to the app");
 				logInfo=test.createNode(new GherkinKeyword("Given"),"Customer is on the official web");
@@ -285,34 +299,11 @@ public User convert(Map<String, String> entry){
 			}catch(AssertionError | Exception e)
 			{
 				testStepHandle("FAIL",Driver,logInfo,e);
+				logger.fatal("something went wrong");
 			}
   }
 	  
-	  @Given("Customer is on official app web on IE")
-      public void customer_enters_correct_admin222_and_pass1_on_IE() 
-      {
-		  
-    		ExtentTest logInfo = null;
-    		try
-    		{
-    			 
-    			test = extent.createTest(Feature.class,"Testing of the Logging Application");
-    			test=test.createNode(Scenario.class,"Unsuccessful login to the app");
-    			logInfo=test.createNode(new GherkinKeyword("Given"),"Customer is on the official web");
-    			 
-         System.out.println("IE Browser");
-         Driver = new InternetExplorerDriver();
-			Driver.navigate().to("http://demo.guru99.com/V4/");
-		    String url = Driver.getCurrentUrl();
-		    System.out.println("Customer enters page "+url); 
-		    logInfo.pass("Opened Browser and entered URL");
-			 
-		    
-    		}catch(AssertionError | Exception e)
-    		{
-    			testStepHandle("FAIL",Driver,logInfo,e);
-    		}
-      }
+	
 	  @When("user enters {string} and {int}")
 		public void EcelPassing(String Login, Integer RowNumber) throws InvalidFormatException, IOException
 	{
@@ -322,7 +313,7 @@ public User convert(Map<String, String> entry){
 			List<Map<String, String>> testData = reader.getData("C:\\Users\\kgajdosz\\Documents\\bench learning\\BDD\\Gherkin-Cucumber\\BddFrameworkGherkin\\automation.xlsx", Login);
 		  try
 			{
-			 
+				logger.info("User enters credentials (table structure - excel)");
 			logInfo=test.createNode(new GherkinKeyword("When"),"Customer enters username and password");
 		
 			System.out.println("final check");
@@ -345,6 +336,7 @@ public User convert(Map<String, String> entry){
 			}catch(AssertionError | Exception e)
 			{
 				testStepHandle("FAIL",Driver,logInfo,e);
+				logger.fatal("something went wrong");
 			}
 			
 		}
@@ -354,7 +346,7 @@ public User convert(Map<String, String> entry){
 		ExtentTest logInfo = null;
 		try
 		{
-		 
+			logger.info("Customer enters correct login credentials2");
 		logInfo=test.createNode(new GherkinKeyword("When"),"Customer enters username and password");
 		
 	
@@ -382,6 +374,7 @@ public User convert(Map<String, String> entry){
 		}catch(AssertionError | Exception e)
 		{
 			testStepHandle("FAIL",Driver,logInfo,e);
+			logger.fatal("something went wrong");
 		}
 	
 	}
